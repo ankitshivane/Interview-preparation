@@ -1,0 +1,33 @@
+1. why Strings are immutable in Java?
+answer - 
+In Java, strings are immutable, which means once a `String` object is created, its value cannot be changed. This design choice has several advantages:
+
+1. **Thread Safety:**
+   - Immutability makes strings inherently thread-safe. Since the state of a string cannot be modified, it can be safely shared among multiple threads without the need for synchronization.
+
+2. **Security:**
+   - Strings are widely used in various contexts, including handling sensitive data like passwords. Immutability ensures that once a string is created, its value cannot be altered, reducing the risk of unintentional changes that could compromise security.
+
+3. **Caching:**
+   - String literals in Java are stored in a string pool, which allows for string interning. If two string literals with the same value are encountered, they refer to the same string object. This can lead to more efficient memory usage and better performance.
+
+4. **Hashing:**
+   - Immutable strings simplify hash code calculations. The hash code of a string can be computed once when the string is created and cached, improving the performance of hash-based data structures like `HashMap`.
+
+5. **Simplicity and Predictability:**
+   - Immutability simplifies the handling of strings by eliminating the need to manage changes and updates. This contributes to code predictability and makes reasoning about string operations more straightforward.
+
+6. **Optimizations:**
+   - Java can optimize string handling because of immutability. For example, the `substring()` method returns a new string that shares the same underlying character array, rather than creating a new array.
+
+7. **String Pool:**
+   - String literals are stored in a pool, and when a new string is created with the same value as an existing string literal, the existing instance is reused. This helps conserve memory.
+
+However, it's worth noting that while the content of a `String` object is immutable, operations on strings can still result in new `String` objects being created. For performance-critical applications, using `StringBuilder` or `StringBuffer` may be more efficient when significant concatenation or modification operations are involved, as these classes allow for mutable string-like behavior.
+
+----------
+
+
+2. How to create Immutable class in Java?
+answer-
+https://www.google.com/amp/s/www.geeksforgeeks.org/create-immutable-class-java/amp/
