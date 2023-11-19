@@ -31,3 +31,31 @@ However, it's worth noting that while the content of a `String` object is immuta
 2. How to create Immutable class in Java?
 answer-
 https://www.google.com/amp/s/www.geeksforgeeks.org/create-immutable-class-java/amp/
+
+
+3. what is marker interface in java?
+Answer-
+A marker interface in Java, also known as a "tag" interface, is an interface that does not declare any methods. Instead, it serves as a marker or tag to indicate to the compiler or runtime environment that a class implementing the interface should be treated in a certain way or has a specific characteristic. Marker interfaces are typically used for metadata or to categorize classes.
+
+For example, the `java.io.Serializable` and `java.rmi.Remote` interfaces are marker interfaces. Classes that implement `Serializable` indicate that their instances can be serialized, and classes that implement `Remote` are meant to be used in remote method invocations.
+
+Here's an example of a marker interface:
+
+```java
+public interface MyMarkerInterface {
+}
+```
+
+You can create your own marker interface by defining an interface with no methods, just as shown in the example above. You can then have classes implement your marker interface to indicate their affiliation with a particular category or behavior.
+
+However, the JVM (Java Virtual Machine) does not have built-in knowledge of marker interfaces. It's up to the developer, the application, or third-party libraries and frameworks to interpret the meaning of marker interfaces and act accordingly.
+
+For example, if you create a marker interface like `MyMarkerInterface`, you would need to rely on your code or any framework that you are using to recognize and respond to the fact that a class implements it. The JVM itself won't enforce or manage marker interfaces; it treats them like regular interfaces.
+
+In summary, you can create your own marker interfaces in Java to categorize or tag classes, but it's your responsibility to define and implement the logic associated with those marker interfaces in your application code or through the use of specific libraries or frameworks.
+
+
+
+4. does marker interface contains Variable?
+answer-
+No, marker interfaces in Java do not typically have variables. Marker interfaces are essentially empty interfaces, which means they don't declare any methods or fields. Their primary purpose is to serve as markers or tags to provide metadata about classes that implement them.
