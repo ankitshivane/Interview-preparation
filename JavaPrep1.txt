@@ -32,6 +32,7 @@ However, it's worth noting that while the content of a `String` object is immuta
 answer-
 https://www.google.com/amp/s/www.geeksforgeeks.org/create-immutable-class-java/amp/
 
+---------------------- ---------------------- 
 
 3. what is marker interface in java?
 Answer-
@@ -54,8 +55,52 @@ For example, if you create a marker interface like `MyMarkerInterface`, you woul
 
 In summary, you can create your own marker interfaces in Java to categorize or tag classes, but it's your responsibility to define and implement the logic associated with those marker interfaces in your application code or through the use of specific libraries or frameworks.
 
-
+---------------------- ----------------------
 
 4. does marker interface contains Variable?
 answer-
 No, marker interfaces in Java do not typically have variables. Marker interfaces are essentially empty interfaces, which means they don't declare any methods or fields. Their primary purpose is to serve as markers or tags to provide metadata about classes that implement them.
+---------------------- ----------------------
+
+5. what is the Internal working of Hashmap in java? or how hashmap internally works?
+Answer-
+
+Certainly! Here's a comprehensive answer to the common interview question, "What is the internal working of a HashMap?"
+
+"A HashMap is a widely used data structure in Java that provides efficient storage and retrieval of key-value pairs. Its internal working involves the use of an array of linked lists, which enables quick access to values based on their keys.
+
+1. **Hashing Mechanism:** When you put a key-value pair into a HashMap, the key's `hashCode()` method is called to compute a hash code, which is an integer representation of the key. This hash code is used to determine the index at which the value will be stored in the underlying array.
+
+2. **Array of Buckets:** The underlying data structure of a HashMap is an array of buckets. Each bucket is essentially a linked list or, in modern implementations, a tree (in the case of Java 8+ with high collision keys).
+
+3. **Index Calculation:** The hash code is transformed into a valid index by using a modulo operation with the array's size. This index is where the value associated with the key will be stored.
+
+4. **Collision Handling:** Due to the possibility of two different keys producing the same hash code (collision), HashMap uses linked lists (or trees) in each bucket to store multiple key-value pairs. If two keys have the same hash code, they will be placed in the same bucket.
+
+5. **Get and Put Operations:** When you want to retrieve a value based on a key, the key's hash code is computed, and the appropriate bucket is located. The linked list (or tree) in that bucket is then traversed to find the key-value pair. For put operations, you follow the same process to store the key-value pair in the appropriate bucket.
+
+6. **Load Factor:** A load factor is a measure of how full the HashMap is. When the load factor reaches a certain threshold (usually 0.75 in Java), the HashMap is resized, and the number of buckets is increased. This helps maintain efficient access times by reducing the likelihood of collisions.
+
+7. **Key Equality:** To find the correct key-value pair within a bucket, HashMap uses the `equals()` method of keys to determine equality. If two keys have the same hash code but are not equal, they are considered distinct.
+
+In summary, a HashMap uses the principles of hashing and indexing to provide fast access to values based on their keys. It handles collisions by storing multiple key-value pairs in the same bucket, and it dynamically resizes itself to maintain a balance between performance and memory usage. Understanding the internal workings of a HashMap is crucial for efficient data retrieval and manipulation in Java applications."
+
+
+
+
+---------------------- ----------------------
+
+
+6. What if two keys have same has code means there is hash collision so how user will get the value ? And which value he will get?
+Answer-
+
+In the case of a hash collision, where two keys produce the same hash code, the HashMap employs a mechanism to handle this situation and allow users to retrieve the correct value associated with their key. Here's how it works:
+
+1. **Bucket with Collisions:** When two or more keys have the same hash code, they are placed in the same bucket. Each bucket in the HashMap contains a linked list (or a tree in more recent Java versions) to store key-value pairs.
+
+2. **Key Equality:** To distinguish between keys with the same hash code, HashMap uses the `equals()` method of keys to determine equality. When you request a value based on a key, the HashMap searches the linked list (or tree) in the corresponding bucket to find the key that is equal to the key you provided.
+
+3. **Value Retrieval:** The value associated with the key that matches the provided key (based on the `equals()` method) is retrieved and returned to the user.
+
+In summary, if two keys produce the same hash code (hash collision), the HashMap stores them in the same bucket and uses the `equals()` method to determine the correct key-value pair. The user will get the value associated with the key that is equal to the key they used for the retrieval, ensuring they receive the appropriate value even in the presence of hash collisions.
+
