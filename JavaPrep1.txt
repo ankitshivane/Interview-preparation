@@ -104,3 +104,13 @@ In the case of a hash collision, where two keys produce the same hash code, the 
 
 In summary, if two keys produce the same hash code (hash collision), the HashMap stores them in the same bucket and uses the `equals()` method to determine the correct key-value pair. The user will get the value associated with the key that is equal to the key they used for the retrieval, ensuring they receive the appropriate value even in the presence of hash collisions.
 
+-------------------------------------------
+
+
+7. Remove key from a Map while iterating over it in Java
+Answer-
+https://www.techiedelight.com/remove-key-from-map-while-iterating-java/
+
+-----------------------------------------
+
+8.
