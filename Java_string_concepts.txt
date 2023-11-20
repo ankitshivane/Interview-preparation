@@ -1,0 +1,84 @@
+important points for predicting the result of string concatenation:
+*. For .concat() or any string concatenation method the evaluation will always happen at runtime so the string concatenated with this method will always create a new string at runtime
+so new reference or string object will be created 
+
+*. If we are using + operator for concatenation then the result may vary for below cases 
+A. If the concatinating strings are constant then the string evaluation will happen at compile time and if the evaluated string is present in SCP then the object will be pointed to the existing string reference instead of creating a new one
+
+B. If are using + operator with non constant strings then the string evaluation will always happen at runtime and due to runtime operation new string will be created and this new string ( the resulted string) will be present at java Heap an
+
+* When ever we are using new operator compulsory a new object will be created on the 
+Heap . There may be a chance of existing two objects with same content on the heap but 
+there is no chance of existing two objects with same content on SCP . i.e., duplicate 
+objects possible in the heap but not in SCP
+
+
+
+As we know that string is immutable in Java so It means once string object is created we can not change its content and if we are trying to do so a new string object will be created in Heap
+
+So with this in mind there are few rules
+
+* For every String Constant one object will be created in SCP. Because of runtime 
+operation if an object is required to create compulsory that object should be placed on 
+the heap but not SCP.
+
+
+
+CASE 1:
+
+If we are combining two string literal as a constant value then 
+As a constant expression evaluation process at compile time only so the result will be true instead of false for two string equality with ==(means reference comparison to check whether they are two different object or same object)
+
+For example:
+
+String s3="you cannot change me!";
+
+String s5="you cannot "+"change me!";
+System.out.println(s3==s5); //true
+
+Explanation:
+
+String s5="you cannot "+"change me!";
+This line concatenates the string literals "you cannot " and "change me!" during compilation.
+The compiler performs constant expression evaluation and combines them into a single string literal "you cannot change me!".
+Since this concatenated string is the same as the string assigned to s3 and s4, the == comparison with s3 yields true.
+
+CASE 3:
+
+If we are concatenating a constant string with some non constant variable with let's say + operator then also the result will be false when we do == equality check 
+
+For example 
+String s3="you cannot change me!";
+String s6="you cannot ";
+
+String s7=s6+"change me!";
+System.out.println(s3==s7); // false
+
+Explanation-
+even though the content of s7 is the same as that of s3, they are two different string objects because s7 is created through concatenation at runtime.
+and the new object is created on the Heap with the content as "you cannot change me"
+even though the content is same of s3 and s7 but the objects are total different so the result is false
+
+
+CASE 4:
+
+If we are concatenating two final string means even if it is a string variable but if it is declare as final and we are using + operator then the string evaluation will happen at compile time due to considering it as a constant expression 
+For example:
+
+final String s8="you cannot ";
+String s9=s8+"change me!";
+System.out.println(s3==s9);//true
+
+as explain in very beginning of + operator point here we are concatinating two constant string and the evaluation is happened at compile time only and saved to s9 string object so at runtime instead of creating new object as with same control one string literal is already 
+present in the SCP area so it pointed to that object only so here s3 and s9 are pointed to same string object only so that's why the result is true 
+
+CASE 5:
+
+String s1=new String("spring");
+s1.concat("fall");
+s1=s1+"winter";
+String s2=s1.concat("summer");
+System.out.println(s1); // springwinter 
+System.out.println(s2); //springwintersummer
+
+
