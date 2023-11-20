@@ -1,4 +1,28 @@
 important points for predicting the result of string concatenation:
+
+point 1-
+String s=new String("bhaskar");
+s.concat("software");
+System.out.println(s);//bhaskar
+
+Once we create a String object we can't perform any changes in the existing object. If we are try to perform any changes with those changes a new object will be created. This behavior is called 
+immutability of the String object
+
+point 2- 
+
+String s1=new String("ashok");
+String s2=new String("ashok")
+System.out.println(s1==s2);//false
+System.out.println(s1.equals(s2));//true
+
+In String class .equals() method is overridden for content comparison hence if the content is same .equals() method returns true even though objects are different.
+
+point 3-
+
+String s=new String("bhaskar");
+In this case two objects will be created one is on the heap the other one is SCP(String constant pool) and s is always pointing to heap object.
+
+
 *. For .concat() or any string concatenation method the evaluation will always happen at runtime so the string concatenated with this method will always create a new string at runtime
 so new reference or string object will be created 
 
