@@ -114,3 +114,54 @@ https://www.techiedelight.com/remove-key-from-map-while-iterating-java/
 -----------------------------------------
 
 8.
+how to use Object as a key in Hashmap
+Answer:
+
+**To use an object as a key in a HashMap:**
+
+1. **Override equals() and hashCode():**
+   - Ensure the class of the object overrides the `equals()` and `hashCode()` methods.
+   - The `equals()` method should provide a logical comparison of the object's content, and `hashCode()` should generate a consistent hash code based on those contents.
+
+   ```java
+   @Override
+   public boolean equals(Object obj) {
+       // Custom logic for equality comparison
+   }
+
+   @Override
+   public int hashCode() {
+       // Custom logic for generating hash code
+   }
+   ```
+
+2. **Immutability:**
+   - Prefer using immutable objects as keys to maintain consistency. If a key is mutable and its state changes after being used as a key, it might lead to unexpected behavior in the HashMap.
+
+3. **Consistent Hashing:**
+   - Ensure that the `equals()` and `hashCode()` methods are implemented consistently. If two objects are equal, their hash codes must be equal as well.
+
+4. **Handling Collisions:**
+   - Understand that hash collisions can occur, and HashMap handles them using a linked list of entries or, in modern versions, a balanced tree for performance optimization.
+   - A good hash function can help minimize collisions.
+
+5. **Example Implementation:**
+   - Provide an example of how you would implement `equals()` and `hashCode()` in the class.
+
+   ```java
+   @Override
+   public boolean equals(Object obj) {
+       if (this == obj) return true;
+       if (obj == null || getClass() != obj.getClass()) return false;
+       MyClass myObject = (MyClass) obj;
+       return Objects.equals(property1, myObject.property1) &&
+              Objects.equals(property2, myObject.property2);
+   }
+
+   @Override
+   public int hashCode() {
+       return Objects.hash(property1, property2);
+   }
+   ```
+
+By following these steps, you ensure that the object can be used effectively as a key in a HashMap, maintaining the integrity of the key-value associations and optimizing retrieval performance.
