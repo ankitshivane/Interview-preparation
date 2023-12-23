@@ -263,3 +263,81 @@ public class Main {
 ```
 
 In this example, `Car` has a "has-a" relationship with `Engine`. The `Car` class contains an instance of the `Engine` class as a member, and it can utilize the functionality of the `Engine` class through this composition.
+
+
+
+---------------------------------------------
+
+What is the difference between composition and aggression or they are same ?
+
+answers-
+
+In object-oriented programming, composition and aggregation are both forms of association that describe relationships between classes, but they differ in the strength and ownership of the relationship.
+
+### Composition:
+
+- **Definition:** Composition is a strong form of association where one class (the whole) is composed of another class (the part). The part has no independent existence; it exists only within the context of the whole. If the whole is destroyed, its parts are also destroyed.
+
+- **Ownership:** In composition, the parent class owns the objects of the child class.
+
+- **Example:** If a `Car` class has an `Engine` class as a member, and the `Engine` is an integral part of the `Car`, this is an example of composition.
+
+```java
+class Car {
+    private Engine engine; // Composition
+}
+```
+
+### Aggregation:
+
+- **Definition:** Aggregation is a weaker form of association where one class (the whole) has another class (the part) as a member, but the part can exist independently of the whole. If the whole is destroyed, its parts can still exist.
+
+- **Ownership:** In aggregation, the parent class does not necessarily own the objects of the child class; they can exist independently.
+
+- **Example:** If a `University` class has a collection of `Student` objects, and a `Student` can exist outside the context of the `University`, this is an example of aggregation.
+
+```java
+class University {
+    private List<Student> students; // Aggregation
+}
+```
+
+### Key Differences:
+
+1. **Ownership and Lifespan:**
+   - **Composition:** The whole (parent) owns the parts (children), and the lifespan of the parts is dependent on the lifespan of the whole.
+   - **Aggregation:** The whole (parent) may reference parts (children), but the parts can exist independently of the whole.
+
+2. **Dependency:**
+   - **Composition:** Strong dependency. The child object is a crucial part of the parent object.
+   - **Aggregation:** Weaker dependency. The child object can exist independently and may be used by multiple parent objects.
+
+3. **Terminology:**
+   - **Composition:** Sometimes referred to as a "has-a" relationship.
+   - **Aggregation:** Sometimes referred to as a "has-a" relationship as well, but with a weaker association.
+
+### Code Example:
+
+Here's a brief example to illustrate the difference:
+
+```java
+// Composition
+class Engine {
+    // Engine class code
+}
+
+class Car {
+    private Engine engine; // Car has an Engine (composition)
+}
+
+// Aggregation
+class Student {
+    // Student class code
+}
+
+class University {
+    private List<Student> students; // University has Students (aggregation)
+}
+```
+
+In summary, composition and aggregation both describe relationships between classes, but composition implies a stronger, more exclusive relationship where the part is an integral component of the whole, while aggregation suggests a looser relationship where the part can exist independently.
