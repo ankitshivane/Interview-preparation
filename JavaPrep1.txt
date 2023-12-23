@@ -165,3 +165,101 @@ Answer:
    ```
 
 By following these steps, you ensure that the object can be used effectively as a key in a HashMap, maintaining the integrity of the key-value associations and optimizing retrieval performance.
+
+
+---------------------------------------------
+
+9. Explain has-a relationship in details and how it is different from is-a relationship and write code for this
+Answer--
+Certainly! In object-oriented programming, the "has-a" relationship is a form of association where one class has a member that is an object of another class. It is also known as composition or aggregation. Unlike the "is-a" relationship, which is based on inheritance, the "has-a" relationship is based on encapsulation and the use of objects as attributes.
+
+### "has-a" Relationship:
+
+- **Definition:** A class has a "has-a" relationship with another class if it contains an instance of that class as a member.
+
+- **Example:** Consider a `Car` class that has a "has-a" relationship with an `Engine` class. Each car "has an" engine.
+
+```java
+class Engine {
+    // Engine class code
+}
+
+class Car {
+    private Engine engine; // Car has an Engine
+
+    public Car(Engine engine) {
+        this.engine = engine;
+    }
+
+    // Other Car class code
+}
+```
+
+In this example, the `Car` class contains an instance variable `engine` of type `Engine`. This represents a "has-a" relationship between `Car` and `Engine`.
+
+### "has-a" vs "is-a" Relationship:
+
+- **"is-a" Relationship:** This is established through inheritance. For example, if `B` extends `A`, it means "B is a type of A."
+
+  ```java
+  class A {
+      // A class code
+  }
+
+  class B extends A {
+      // B is a type of A
+  }
+  ```
+
+- **"has-a" Relationship:** This is established through composition or aggregation. It signifies that one class has another class as a part or member.
+
+  ```java
+  class Engine {
+      // Engine class code
+  }
+
+  class Car {
+      private Engine engine; // Car has an Engine
+
+      // Other Car class code
+  }
+  ```
+
+### Code Example:
+
+```java
+class Engine {
+    private String type;
+
+    public Engine(String type) {
+        this.type = type;
+    }
+
+    public String getType() {
+        return type;
+    }
+}
+
+class Car {
+    private Engine engine; // Car has an Engine
+
+    public Car(Engine engine) {
+        this.engine = engine;
+    }
+
+    public void start() {
+        System.out.println("Car with " + engine.getType() + " engine is starting.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Engine myEngine = new Engine("V8");
+        Car myCar = new Car(myEngine);
+
+        myCar.start(); // Output: Car with V8 engine is starting.
+    }
+}
+```
+
+In this example, `Car` has a "has-a" relationship with `Engine`. The `Car` class contains an instance of the `Engine` class as a member, and it can utilize the functionality of the `Engine` class through this composition.
