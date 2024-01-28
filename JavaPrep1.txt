@@ -341,3 +341,60 @@ class University {
 ```
 
 In summary, composition and aggregation both describe relationships between classes, but composition implies a stronger, more exclusive relationship where the part is an integral component of the whole, while aggregation suggests a looser relationship where the part can exist independently.
+
+
+
+---------------------------------------------------------------------------
+
+question
+As we know singleton class create only one object but what if we make a class as  cloneable and make clones then it will broke the rule of singleton class
+Answer -
+
+implementing the Cloneable interface in a singleton class could potentially violate the singleton pattern by allowing multiple instances to be created through cloning. However, there are ways to prevent this from happening.
+
+to maintain the singleton pattern while implementing the Cloneable interface:
+
+Override the clone Method:
+1.
+Override the clone method inherited from the Object class and throw a CloneNotSupportedException to prevent cloning. This way, attempting to clone the singleton object will result in an exception.
+2.
+Handle Cloning Logic:
+
+If allowing cloning is necessary for your application but you still want to maintain the singleton pattern, you can handle the cloning logic within the clone method itself. For example, you could throw an exception if cloning is attempted after the singleton instance has been created.
+Here's an example demonstrating how to prevent cloning in a singleton class:
+
+public class Singleton implements Cloneable {
+    private static Singleton instance = new Singleton();
+
+    private Singleton() {
+        // Private constructor to prevent instantiation from outside
+    }
+
+    public static Singleton getInstance() {
+        return instance;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        throw new CloneNotSupportedException("Cloning of singleton objects is not allowed");
+    }
+}
+
+
+----------------------------------------------
+
+There is an interview question Why do we need functional interface in Java
+Answer
+in Java 8. Here's why we need functional interfaces in Java:
+
+Lambda Expressions:
+1.
+Functional interfaces provide a single abstract method (SAM) that can be implemented using lambda expressions. This allows for concise and expressive code when working with functional programming constructs.
+2.
+Stream API:
+Functional interfaces play a crucial role in the Stream API introduced in Java 8. Many methods in the Stream API, such as map, filter, and reduce, accept functional interfaces as parameters. This allows for fluent and declarative stream processing operations.
+3.
+API Design:
+Functional interfaces promote better API design by encouraging developers to design methods that accept functional interfaces as parameters. This leads to more flexible and composable APIs that can accommodate a wide range of behaviors and use cases
+
+--------------------------------------------------------------------------
