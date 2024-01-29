@@ -398,3 +398,8 @@ API Design:
 Functional interfaces promote better API design by encouraging developers to design methods that accept functional interfaces as parameters. This leads to more flexible and composable APIs that can accommodate a wide range of behaviors and use cases
 
 --------------------------------------------------------------------------
+SOLID design principles 
+
+https://www.adaface.com/blog/solid-principles-interview-questions/
+
+-------------------------------------------
