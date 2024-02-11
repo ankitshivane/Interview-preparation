@@ -1,0 +1,5 @@
+important link of spring boot interview question
+
+https://www.turing.com/interview-questions/spring-boot#intermediate-spring-boot-interview-questions-and-answers
+
+-------------------------
