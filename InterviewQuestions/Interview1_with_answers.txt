@@ -1,0 +1,98 @@
+Below are the answers to each interview question:
+
+1. **What is marker interface?**
+   - A marker interface in Java is an interface with no methods. Its sole purpose is to mark or identify a class so that some operation can be performed based on the presence of the marker interface. Examples include `Serializable`, `Cloneable`, and `Remote`.
+
+2. **And if it is empty then why it is used?**
+   - Marker interfaces are used to provide metadata to the compiler or runtime environment. Even though they don't define any methods, they serve as a signal to the compiler or runtime system to enable certain behaviors or optimizations. For example, the `Serializable` interface in Java is used to indicate that a class can be serialized.
+
+3. **What is serialisation?**
+   - Serialization is the process of converting an object into a stream of bytes to store the object or transmit it over a network. The reverse process is called deserialization, where the object is reconstructed from the stream of bytes.
+
+4. **What is serial version uid in serialisation?**
+   - The serialVersionUID is a unique identifier for serializable classes. It's used during deserialization to verify that the sender and receiver of a serialized object have loaded classes for that object that are compatible with respect to serialization. If the receiver has loaded a class for the object that has a different serialVersionUID than that of the corresponding sender's class, then deserialization will result in an `InvalidClassException`.
+
+5. **What is the internal working of hashset?**
+   - `HashSet` internally uses a `HashMap` to store its elements. It stores elements in the underlying `HashMap` as keys and uses a dummy value (usually `PRESENT`) to represent the value associated with each key. As a result, `HashSet` ensures uniqueness of its elements by not allowing duplicate keys.
+
+6. **What is the internal working of a JVM?**
+   - The JVM (Java Virtual Machine) is responsible for executing Java bytecode. It loads, verifies, and executes Java programs by converting bytecode into machine-specific instructions. It also provides runtime environment services such as memory management, garbage collection, and exception handling.
+
+7. **How JVM loads the classes?**
+   - The JVM loads classes dynamically as they are referenced by the program. Classes are loaded from the classpath, which can include directories, JAR files, and other archives. The loading process involves locating the class file, reading its bytecode, and creating a corresponding `Class` object in memory.
+
+8. **For a JUnit test case, how to exclude that from a framework?**
+   - In JUnit, you can exclude certain test classes or methods from execution using annotations such as `@Ignore` at the class level or `@Disabled` at the method level. These annotations prevent the execution of the annotated tests during test runs.
+
+9. **What does @Component annotation do in Spring Boot?**
+   - The `@Component` annotation in Spring Boot is used to mark a Java class as a Spring-managed component. Spring Boot automatically detects classes annotated with `@Component` and registers them as beans in the application context, making them available for dependency injection.
+
+10. **Does Spring bean is thread-safe or it is not?**
+    - By default, Spring beans are singletons and are shared among multiple threads. Whether a Spring bean is thread-safe or not depends on how it's implemented. If the bean's state is mutable and shared among threads, proper synchronization mechanisms should be used to ensure thread safety.
+
+11. **What is Spring IOC?**
+    - Spring IOC (Inversion of Control) is a design principle where the control of object creation and dependency injection is shifted from the application code to a container or framework. In Spring, IOC is achieved through dependency injection, where objects are provided with their dependencies rather than creating them themselves.
+
+12. **What are the microservices patterns you have used?**
+    - Microservices patterns commonly used include Service Discovery, Circuit Breaker, API Gateway, Saga, Event Sourcing, and CQRS (Command Query Responsibility Segregation). The choice of patterns depends on the specific requirements and architecture of the microservices-based system.
+
+13. **What are the annotations you used in your project?**
+    - Common annotations used in Spring Boot projects include `@RestController`, `@Service`, `@Repository`, `@Autowired`, `@Component`, `@RequestMapping`, `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping`, `@ExceptionHandler`, `@Value`, and `@Configuration`, among others.
+
+14. **What is the advantage we get when we use Spring Boot than Spring Framework?**
+    - Spring Boot provides several advantages over the traditional Spring Framework, including auto-configuration, embedded server support, simplified dependency management with starters, production-ready features out of the box, and a more streamlined development experience.
+
+15. **How have you done custom exception handling in your Spring Boot project?**
+    - Custom exception handling in Spring Boot can be achieved by creating custom exception classes and using `@ExceptionHandler` methods in controllers to handle specific exceptions. Additionally, global exception handling can be configured using `@ControllerAdvice` classes.
+
+16. **How to change the underlying existing embedded server in Spring Boot and what all configuration changes we have to do?**
+    - To change the underlying embedded server in Spring Boot, you can exclude the default embedded server dependency (e.g., Tomcat) and include the desired server dependency (e.g., Jetty or Undertow) in the `pom.xml` file. Additionally, you may need to configure server-specific properties in the application configuration file (`application.properties` or `application.yml`).
+
+17. **How to change WAR to JAR project building? Which annotation or keyword do we need to use?**
+    - To change a Spring Boot project from building a WAR (Web Application Archive) to a JAR (Java Archive), you need to modify the packaging type in the `pom.xml` file from `war` to `jar`. Additionally, you may need to update the build configuration and dependencies accordingly.
+
+18. **Suppose there is one dependency and I want to remove that but not from POM, instead, I want to use some tag or annotation or some keywords so that it will be considered as deleted? Answer is - will use exclusion tag.**
+    - To exclude a specific dependency without removing it from the `pom.xml`, you can use the `<exclusions>` tag within the dependency declaration in the `pom.xml`. This allows you to exclude transitive dependencies from being included in your project.
+
+19. **How to connect one microservice to multiple data sources?**
+    - In a microservices architecture, each microservice can have its own data source or database. To connect a microservice to multiple data sources, you can configure multiple `DataSource` beans in the application context and use Spring's `@Qualifier` annotation to specify which data source to inject into a particular component.
+
+20. **What is a profile in Spring Boot?**
+    - A profile in Spring Boot is a way to provide different configurations for different environments (e.g., development, testing, production). Profiles allow you to specify which beans and configurations should be active based on the current environment, making it easier to manage application settings across different deployment environments.
+
+21. **What is the difference between @Controller and @RestController annotation?**
+    - The `@Controller` annotation is used to define a class as a controller in Spring MVC, typically
+
+ used to handle HTTP requests and generate responses. The `@RestController` annotation is a specialized version of `@Controller` that combines `@Controller` and `@ResponseBody`, making it convenient for building RESTful web services where the response is directly serialized to JSON or XML.
+
+22. **What is idempotency in Spring Boot? And which method in Spring Boot is idempotent?**
+    - Idempotency in Spring Boot refers to the property of a method where multiple invocations with the same input produce the same result and have the same side effects as a single invocation. In HTTP, idempotent methods are those that have no additional effect if they are called multiple times with the same input parameters. For example, `GET`, `HEAD`, `PUT`, and `DELETE` methods are considered idempotent in HTTP.
+
+23. **What are the challenges you faced in your project and how did you overcome those?**
+    - Provide specific examples of challenges encountered during your project, such as technical hurdles, integration issues, performance bottlenecks, or scalability concerns. Explain how you identified and addressed each challenge, whether through troubleshooting, collaboration with teammates, or research-based solutions.
+
+**Coding Questions:**
+
+1. **Using Java Stream, you have to fetch the Department wise maximum salary of an employee from the given list of employees.**
+   - [Java code snippet to achieve the task]
+Map<String, Double> maxSalaryByDepartment = employees.stream()
+                .collect(Collectors.groupingBy(Employee::getDepartment,
+                        Collectors.mapping(Employee::getSalary,
+                                Collectors.collectingAndThen(Collectors.maxBy(Comparator.naturalOrder()),
+                                        opt -> opt.orElse(0.0)))));
+
+        System.out.println("Department wise maximum salary: " + maxSalaryByDepartment);
+    
+
+
+
+2. **Get the list of employees having salary greater than 10000 and print the name of those employees.**
+   - [Java code snippet to achieve the task]
+List<String> highSalaryEmployees = employees.stream()
+                .filter(employee -> employee.getSalary() > 10000)
+                .map(Employee::getName)
+                .collect(Collectors.toList());
+
+        System.out.println("Employees with salary greater than 10000: " + highSalaryEmployees);
+    
+ 
