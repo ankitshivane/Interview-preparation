@@ -1,1 +1,54 @@
 
+**Interview Questions Documentation:**
+
+1. **What is marker interface?**
+   
+2. **And if it is empty then why it is used?**
+   
+3. **What is serialisation?**
+   
+4. **What is serial version uid in serialisation?**
+   
+5. **What is the internal working of hashset?**
+   
+6. **What is the internal working of a JVM?**
+   
+7. **How JVM loads the classes?**
+   
+8. **For a JUnit test case how to exclude that from a framework?**
+   
+9. **What does @Component annotation do in Spring Boot?**
+   
+10. **Does Spring bean is thread-safe or it is not?**
+   
+11. **What is Spring IOC?**
+   
+12. **What are the microservices patterns you have used?**
+   
+13. **What are the annotations you used in your project?**
+   
+14. **What is the advantage we get when we use Spring Boot than Spring Framework?**
+   
+15. **How have you done custom exception handling in your Spring Boot project?**
+   
+16. **How to change the underlying existing embedded server in Spring Boot and what all configuration changes we have to do?**
+   
+17. **How to change WAR to JAR project building? Which annotation or keyword do we need to use?**
+   
+18. **Suppose there is one dependency and I want to remove that but not from POM, instead, I want to use some tag or annotation or some keywords so that it will be considered as deleted? Answer is - will use exclusion tag.**
+   
+19. **How to connect one microservice to multiple data sources?**
+   
+20. **What is a profile in Spring Boot?**
+   
+21. **What is the difference between @Controller and @RestController annotation?**
+   
+22. **What is idempotency in Spring Boot? And which method in Spring Boot are idempotent?**
+   
+23. **What are the challenges you faced in your project and how did you overcome those?**
+
+**Coding Questions:**
+
+1. **Using Java Stream, you have to fetch the Department wise maximum salary of an employee from the given list of employees.**
+
+2. **Get the list of employees having salary greater than 10000 and print the name of those employees.**
