@@ -1,0 +1,46 @@
+
+
+**EPAM Interview Questions:**
+
+1. **What is saga pattern in microservices?**
+
+2. **What is singleton class in java?**
+
+3. **How to create a singleton class?**
+
+4. **Are this singleton class threadsafe?**
+
+5. **If they are not thread safe then how you create a singleton class using double check locking?**
+
+6. **Can we override main method in java?**
+
+7. **Why shouldn't we serialize data into a text file?**
+
+8. **What if your serializable class contains a member that is not serializable then how should you fix it?**
+
+9. **What is Transient in java?**
+
+10. **How does garbage collection work In java?**
+
+11. **So do finalized keyword has any role in garbage collection?**
+
+12. **What algorithm JVM used for garbage collection?**
+
+13. **How does memory leaks occur in java even if we have garbage collection?**
+
+14. **What is Difference between young generation and old generation memory spaces?**
+
+15. **Suppose you observed that a spring boot application performance is slow in production then compare to development environment then what steps you will take to address this issue?**
+
+16. **How do you integrate relational database like MySQL with a spring boot application?**
+
+17. **How would you modify an existing spring boot application to convert it into serverless architecture?**
+
+18. **How does spring boot application make the decision that which server to use?**
+
+19. **How would you handle exceptions in a spring boot REST application?**
+
+20. **How can we handle multiple beans of the same type?**
+
+21. **In the Spring Framework, what is aspect-oriented programming?**
+
