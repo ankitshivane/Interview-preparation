@@ -3,3 +3,24 @@ important link of spring boot interview question
 https://www.turing.com/interview-questions/spring-boot#intermediate-spring-boot-interview-questions-and-answers
 
 -------------------------
+java interview question link
+https://github.com/DopplerHQ/awesome-interview-questions?tab=readme-ov-file
+
+-------------------------
+java 8 coding questions
+
+https://javaconceptoftheday.com/java-8-interview-sample-coding-questions/
+
+-------------------------
+Geeks for geeks java array practice program 
+
+https://www.geeksforgeeks.org/java-array-programs/
+
+-------------------------
+
+java spring boot interview recording
+
+https://youtube.com/playlist?list=PLW44Ou4bcDZG1o0TOujky_0wE-_BVIPNW&si=rk92lko0lbV6sKx7
+
+
+-------------------------
