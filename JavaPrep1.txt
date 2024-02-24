@@ -403,3 +403,16 @@ SOLID design principles
 https://www.adaface.com/blog/solid-principles-interview-questions/
 
 -------------------------------------------
+why should we use optional keyword in java when we have null check doing same task?
+answer -
+
+The `Optional` class in Java provides a safer and more expressive alternative to null checks:
+
+1. **Clarity**: Clearly indicates potential absence of a value.
+2. **Safety**: Helps prevent NullPointerExceptions.
+3. **Explicit Handling**: Encourages explicit handling of both present and absent values.
+4. **Functional Programming**: Supports functional programming principles.
+5. **Stream API Integration**: Seamlessly integrates with the Stream API.
+6. **API Consistency**: Establishes a consistent approach for handling optional values.
+
+In essence, `Optional` promotes clarity, safety, and consistency in code while facilitating functional programming and integration with Java's Stream API.
