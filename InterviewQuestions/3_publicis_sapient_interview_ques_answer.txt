@@ -1,0 +1,96 @@
+
+**Publicis Sapient Interview Question Answers:**
+
+**Interview:**
+
+1. **String is thread safe?**
+   - No, in Java, `String` is immutable, meaning once created, its state cannot be changed. While this immutability makes `String` objects inherently thread-safe for read-only operations, concurrent modifications to `String` objects can still lead to race conditions if not synchronized properly.
+
+2. **If I have all the classes in my project as thread-safe then what will be the advantages and disadvantages?**
+   - *Advantages:*
+     - Improved concurrency: Thread-safe classes ensure safe concurrent access to shared resources, reducing the risk of race conditions and thread interference.
+     - Enhanced reliability: Thread-safe classes can help prevent data corruption and inconsistencies in multi-threaded environments, leading to more reliable and predictable behavior.
+   - *Disadvantages:*
+     - Performance overhead: Thread-safe mechanisms such as synchronization or locks can introduce performance overhead due to increased contention and context switching.
+     - Complexity: Ensuring thread safety often requires complex synchronization logic, which can be error-prone and difficult to maintain.
+
+3. **What is encapsulation?**
+   - Encapsulation is one of the four fundamental object-oriented programming (OOP) concepts, along with inheritance, polymorphism, and abstraction. It refers to the bundling of data (attributes) and methods (behaviors) that operate on the data into a single unit, known as a class. Encapsulation helps in hiding the internal state of an object and protecting it from unauthorized access, thereby promoting information hiding and modular design.
+
+4. **What is immutability?**
+   - Immutability refers to the property of an object whose state cannot be modified after it is created. Immutable objects in Java are thread-safe by nature and provide several benefits, including simplicity, thread safety, and enhanced concurrency. Examples of immutable classes in Java include `String`, `Integer`, and `LocalDate`.
+
+5. **What is a functional interface in Java 8?**
+   - A functional interface in Java 8 is an interface that contains exactly one abstract method, known as the functional method. Functional interfaces are used to represent single abstract method (SAM) types, and they enable the use of lambda expressions and method references for more concise and expressive code. Examples of functional interfaces in Java 8 include `Runnable`, `Comparator`, and `Consumer`.
+
+6. **What are the advantages of Spring Boot over Spring?**
+   - Spring Boot provides several advantages over traditional Spring Framework, including:
+     - Simplified configuration: Spring Boot offers auto-configuration and starter dependencies, reducing the need for manual configuration.
+     - Embedded server support: Spring Boot includes embedded servers like Tomcat, Jetty, and Undertow, making deployment easier.
+     - Production-ready features: Spring Boot provides built-in support for monitoring, metrics, health checks, and externalized configuration.
+     - Rapid development: Spring Boot's convention-over-configuration approach and quick setup enable faster development of applications.
+
+7. **What is the difference between JPA, Spring Data JPA, and Hibernate?**
+   - JPA (Java Persistence API) is a specification for managing relational data in Java applications, providing a set of interfaces and annotations for defining persistence mappings and performing database operations.
+   - Hibernate is an ORM (Object-Relational Mapping) framework that implements the JPA specification and provides additional features and optimizations for working with relational databases.
+   - Spring Data JPA is a part of the Spring Data project that simplifies data access in Spring applications, providing repositories and query abstractions on top of JPA. It reduces boilerplate code and allows for more concise and expressive database interactions.
+
+8. **How to rollback a query result?**
+   - To rollback a query result in a transactional context, you can use the `rollback()` method provided by the `Transaction` interface. If an error occurs during the execution of a query or transaction, calling `rollback()` will revert the changes made by the transaction and restore the database to its previous state.
+
+9. **What is SOLID design principle?**
+   - SOLID is an acronym for a set of five design principles that promote modular, maintainable, and scalable software design:
+     - **S** - Single Responsibility Principle: A class should have only one reason to change.
+     - **O** - Open/Closed Principle: Software entities (classes, modules, functions, etc.) should be open for extension but closed for modification.
+     - **L** - Liskov Substitution Principle: Subtypes should be substitutable for their base types without altering the correctness of the program.
+     - **I** - Interface Segregation Principle: Clients should not be forced to depend on interfaces they do not use.
+     - **D** - Dependency Inversion Principle: High-level modules should not depend on low-level modules. Both should depend on abstractions, and abstractions should not depend on details.
+
+10. **What is the difference between inheritance and cohesion?**
+    - Inheritance is a mechanism in object-oriented programming where a class (subclass or derived class) inherits properties and behaviors from another class (superclass or base class). It promotes code reuse and facilitates the creation of hierarchical relationships between classes.
+    - Cohesion refers to the degree to which elements within a module (class) are related to each other. High cohesion implies that elements within a module are closely related and work together to achieve a common purpose, leading to more maintainable and understandable code.
+
+11. **What does the verify method do?**
+    - The `verify` method in testing frameworks such as Mockito is used to verify that a specific method has been called on a mock object during the test execution. It allows you to assert that certain interactions with mock objects have occurred as expected, helping to ensure the correctness of the tested code.
+
+**Coding:**
+
+1. **Find the second highest element in an integer array. The constraint is to find this in linear time.**
+   ```java
+   public class SecondHighestElement {
+       public static int findSecondHighest(int[] arr) {
+           int firstMax = Integer.MIN_VALUE;
+           int secondMax = Integer.MIN_VALUE;
+
+           for (int num : arr) {
+               if (num > firstMax) {
+                   secondMax = firstMax;
+                   firstMax = num;
+               } else if (num > secondMax && num != firstMax) {
+                   secondMax = num;
+               }
+           }
+
+           return secondMax;
+       }
+   }
+   ```
+
+2. **Find the number of occurrences of elements present in the given string.**
+   ```java
+   import java.util.HashMap;
+   import java.util.Map;
+
+   public class ElementOccurrences {
+       public static Map<Character, Integer> countOccurrences(String str) {
+           Map<Character, Integer> occurrences = new HashMap<>();
+
+           for (char ch : str.toCharArray()) {
+               occurrences.put(ch, occurrences.getOrDefault(ch, 0) + 1);
+           }
+
+           return occurrences;
+       }
+   }
+   ```
+
