@@ -167,3 +167,143 @@ Here are more annotations used in Spring and Spring Boot:
     - @RefreshScope
 
 
+
+here are some more annotations used in Spring and Spring Boot:
+
+21. Spring WebFlux Annotations:
+    - @Controller
+    - @RestController
+    - @RequestMapping
+    - @GetMapping
+    - @PostMapping
+    - @PutMapping
+    - @DeleteMapping
+    - @PatchMapping
+    - @RequestBody
+    - @ResponseBody
+    - @PathVariable
+    - @RequestParam
+    - @RequestHeader
+    - @ResponseStatus
+    - @ExceptionHandler
+    - @RestControllerAdvice
+
+22. Spring Cloud Config Annotations:
+    - @EnableConfigServer
+    - @EnableConfigClient
+    - @RefreshScope
+    - @ConfigurationProperties
+
+23. Spring Cloud Sleuth Annotations:
+    - @EnableSleuth
+    - @NewSpan
+    - @ContinueSpan
+    - @SpanTag
+    - @SpanName
+
+24. Spring Batch Admin Annotations:
+    - @EnableBatchAdmin
+
+25. Spring Data Redis Annotations:
+    - @RedisHash
+    - @Indexed
+    - @TimeToLive
+    - @RedisSet
+    - @RedisSortedSet
+    - @RedisList
+    - @RedisHash
+
+26. Spring Security OAuth Annotations:
+    - @EnableAuthorizationServer
+    - @EnableResourceServer
+    - @EnableOAuth2Client
+    - @OAuth2Sso
+
+27. Spring Cloud Gateway Annotations:
+    - @EnableGateway
+    - @Route
+    - @PredicateFactory
+    - @Filter
+
+
+ here are more annotations from Spring Core and Spring Boot that were not included in the previous lists:
+
+Spring Core Annotations:
+- @Configuration
+- @Component
+- @Service
+- @Repository
+- @Controller
+- @Bean
+- @Autowired
+- @Qualifier
+- @Resource
+- @Primary
+- @Lazy
+- @Scope
+- @PostConstruct
+- @PreDestroy
+- @Transactional
+- @Value
+- @Conditional
+- @EventListener
+- @Aspect
+- @Pointcut
+- @Around
+- @Before
+- @After
+- @AfterReturning
+- @AfterThrowing
+- @EnableAspectJAutoProxy
+- @EnableTransactionManagement
+- @Import
+- @ImportResource
+- @EnableWebMvc
+- @EnableWebSecurity
+- @EnableCaching
+- @EnableAsync
+- @Async
+- @EnableScheduling
+- @Scheduled
+- @EnableBatchProcessing
+- @Profile
+- @PropertySource
+- @EnableConfigurationProperties
+
+Spring Boot Annotations:
+- @SpringBootApplication
+- @EnableAutoConfiguration
+- @EnableConfigurationProperties
+- @EnableDiscoveryClient
+- @EnableFeignClients
+- @EnableEurekaClient
+- @EnableHystrix
+- @EnableHystrixDashboard
+- @EnableCircuitBreaker
+- @EnableJpaRepositories
+- @EnableMongoRepositories
+- @EnableNeo4jRepositories
+- @EnableJms
+- @EnableRetry
+- @EnableTransactionManagement
+- @EnableGlobalMethodSecurity
+- @EnableJdbcTemplate
+- @EnableScheduling
+- @EnableAsync
+- @EnableAspectJAutoProxy
+- @SpringBootTest
+- @DataJpaTest
+- @WebMvcTest
+- @JsonComponent
+- @EntityScan
+- @EnableSwagger2
+- @EnableBatchProcessing
+- @EnableWebSecurity
+- @EnableResourceServer
+- @EnableAuthorizationServer
+- @EnableBinding
+- @KafkaListener
+- @RabbitListener
+- @TestPropertySource
+
+These annotations cover a wide range of functionalities and configurations provided by Spring Core and Spring Boot for developing robust and efficient Java applications.
