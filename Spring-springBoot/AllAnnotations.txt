@@ -1,0 +1,169 @@
+
+1. Spring Core Annotations:
+   - @Component
+   - @Repository
+   - @Service
+   - @Controller
+   - @Configuration
+   - @Bean
+   - @Autowired
+   - @Qualifier
+   - @Primary
+
+2. Spring Boot Annotations:
+   - @SpringBootApplication
+   - @EnableAutoConfiguration
+   - @EnableConfigurationProperties
+   - @ConfigurationProperties
+   - @RestController
+   - @RequestMapping
+   - @PathVariable
+   - @RequestParam
+   - @ResponseBody
+   - @ResponseStatus
+   - @ExceptionHandler
+   - @Scheduled
+   - @Transactional
+
+3. Spring Security Annotations:
+   - @Secured
+   - @PreAuthorize
+   - @PostAuthorize
+   - @EnableGlobalMethodSecurity
+
+4. Spring Data Annotations:
+   - @Entity
+   - @Table
+   - @Id
+   - @GeneratedValue
+   - @Repository
+   - @Query
+
+5. Spring Boot Testing Annotations:
+   - @SpringBootTest
+   - @WebMvcTest
+   - @DataJpaTest
+   - @MockBean
+   - @Test
+   - @RunWith
+   - @Before
+   - @After
+   - @BeforeClass
+   - @AfterClass
+
+Here are more annotations used in Spring and Spring Boot:
+
+6. Spring Core Annotations (Continued):
+   - @Lazy
+   - @DependsOn
+   - @Scope
+   - @Value
+   - @Profile
+   - @PropertySource
+   - @Primary
+   - @Lazy
+   - @DependsOn
+   - @Lookup
+
+7. Spring Boot Annotations (Continued):
+   - @Value
+   - @Profile
+   - @PropertySource
+   - @ConfigurationPropertiesScan
+   - @ConditionalOnProperty
+   - @ConditionalOnBean
+   - @ConditionalOnClass
+   - @ConditionalOnMissingBean
+   - @ConditionalOnMissingClass
+
+8. Spring MVC Annotations:
+   - @ModelAttribute
+   - @RequestBody
+   - @ResponseBody
+   - @ResponseStatus
+   - @RequestMapping
+   - @GetMapping
+   - @PostMapping
+   - @PutMapping
+   - @DeleteMapping
+   - @PathVariable
+   - @RequestParam
+   - @RequestHeader
+   - @RequestAttribute
+   - @RestControllerAdvice
+   - @ExceptionHandler
+
+9. Spring Data Annotations (Continued):
+   - @EntityListeners
+   - @NamedQuery
+   - @NamedQueries
+   - @AttributeOverrides
+   - @AssociationOverrides
+   - @MappedSuperclass
+
+10. Spring Boot Actuator Annotations:
+    - @Endpoint
+    - @ReadOperation
+    - @WriteOperation
+    - @DeleteOperation
+    - @JmxEndpoint
+    - @HealthIndicator
+
+
+Here are more annotations used in Spring and Spring Boot:
+
+11. Spring Transaction Annotations:
+    - @Transactional
+    - @EnableTransactionManagement
+    - @TransactionalEventListener
+    - @TransactionAttribute
+    - @TransactionManagementConfiguration
+
+12. Spring Security Annotations (Continued):
+    - @AuthenticationPrincipal
+    - @EnableWebSecurity
+    - @EnableGlobalMethodSecurity
+    - @Secured
+    - @PreAuthorize
+    - @PostAuthorize
+    - @EnableOAuth2Client
+    - @EnableOAuth2Sso
+
+13. Spring Boot Testing Annotations (Continued):
+    - @SpringBootTest
+    - @WebMvcTest
+    - @DataJpaTest
+    - @MockBean
+    - @Test
+    - @RunWith
+    - @Before
+    - @After
+    - @BeforeClass
+    - @AfterClass
+    - @SpringBootTest.WebEnvironment
+    - @DataJpaTest
+    - @AutoConfigureMockMvc
+
+14. Spring Data Annotations (Continued):
+    - @Query
+    - @NamedQuery
+    - @NamedQueries
+    - @Procedure
+    - @Modifying
+    - @Transactional
+    - @EntityScan
+    - @EnableJpaRepositories
+
+15. Spring Boot Actuator Annotations (Continued):
+    - @Endpoint
+    - @ReadOperation
+    - @WriteOperation
+    - @DeleteOperation
+    - @EndpointExtension
+    - @EndpointWebExtension
+    - @EndpointId
+    - @JmxEndpoint
+    - @HealthIndicator
+    - @RefreshScope
+
+
