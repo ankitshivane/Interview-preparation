@@ -416,3 +416,9 @@ The `Optional` class in Java provides a safer and more expressive alternative to
 6. **API Consistency**: Establishes a consistent approach for handling optional values.
 
 In essence, `Optional` promotes clarity, safety, and consistency in code while facilitating functional programming and integration with Java's Stream API.
+
+--------------------------------------------
+best article on singleton in depth
+https://www.google.com/amp/s/www.geeksforgeeks.org/java-singleton-design-pattern-practices-examples/amp/
+
+--------------------
