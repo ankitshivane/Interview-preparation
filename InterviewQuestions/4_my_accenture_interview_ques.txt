@@ -1,0 +1,11 @@
+1. What is the image you have used in docker for configuring the spring boot
+2. As it is a standalone application how your application microservices knows about other microservices to call
+3. Where are you storing your docker image whether on the cloud or any registry or how
+4. About overriding and static methods calls output prediction
+5. Which microservices pattern you have used
+6. How authentication is happening in your project? Is it role based?
+7. How will you configure your spring boot application to connect to multiple database without restarting like it happen in spring batch or any other 
+8. Why should we go for spring boot and not spring MVC because spring boot gives multiple default configuration and due to auto configuration but in spring MVC we can go for customized configuration
+9. Which one to choose spring boot or spring MVC and why?
+10. Why we should use optional keyword in java 
+11. Write any lambda expression
