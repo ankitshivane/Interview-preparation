@@ -24,3 +24,9 @@ https://youtube.com/playlist?list=PLW44Ou4bcDZG1o0TOujky_0wE-_BVIPNW&si=rk92lko0
 
 
 -------------------------
+how to configure multiple data sources in spring boot
+
+https://mmafrar.medium.com/configuring-multiple-data-sources-with-spring-boot-2-and-spring-data-jpa-8e236844e80f
+
+
+-------------------
