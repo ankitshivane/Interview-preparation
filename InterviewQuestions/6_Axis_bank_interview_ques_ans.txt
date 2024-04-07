@@ -1,0 +1,127 @@
+Axis bank interview question Round-1
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+1.	Difference between comparable and comparator?
+2.	Which G.C. does JVM/Java use?
+3.	How to know which one to use comparable or comparator? If comparator they why not comparable because comparable also have all the variables in it to apply customized sorting on the object ?
+4.	Lets say we have Student class loaded from external library which we cant change then which one you will use for sorting comparable or comparator?
+5.	What is Future in Java ?
+6.	How to create a bean in spring/Spring boot?
+7.	What is meant by @Service annotation?
+8.	How do you know that the spring boot jar you are creating that what size it will take? And how to allocate them the right size?
+9.	What are the different logging levels are their? And which logging framework you are using in project?
+10.	Difference between Hashmap and concurrentHashMap?
+11.	How to decide whether you need microservices or not? Should we always go for this architecture?
+12.	What is partition in kafka?
+13.	Can you describe how pun-sub model works in apache kafka ? how producer and consumer aquire connections?
+14.	How kafka decide which consumer will be connected to which kafka partition?
+15.	Does kafka partition can have more than one consumer connected to it?
+16.	Can a consumer consume message from more than one kafka partition?
+17.	What are the steps you will take to identify and resolve the production issue?
+18.	How you are doing a feature planning in a project?
+19.	How will you decide that given feature will take the given amount of time/efforts in analysis, development etc?
+20.	What is Jacoco? Its usage and full form? How it is getting used in your project?
+21.	Which all code quality testing framework you are using?
+22.	List any 5 linux commands you use in project?
+23.	What are the different aws services are used in your project?
+24.	What is the default scope of a spring bean? And how to change it?
+25.	What are the different design patterns used in project? Apart from singleton pattern
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Question and answer
+
+Below are the questions with their corresponding answers in a question-answer format:
+
+1. **Difference between Comparable and Comparator?**
+   - **Comparable:** Comparable is an interface used to impose a natural ordering on the objects of a class. The class whose objects are to be sorted must implement the Comparable interface and override the compareTo() method.
+   - **Comparator:** Comparator is an interface used for customized sorting logic. It allows you to define multiple sorting criteria or sort objects of classes that you can't modify. Comparator implements the compare() method for comparing two objects.
+
+2. **Which G.C. does JVM/Java use?**
+   - JVM uses various Garbage Collection (GC) algorithms such as Serial GC, Parallel GC, CMS GC (Concurrent Mark Sweep), G1 GC (Garbage-First), depending on the JDK version and the runtime environment configuration.
+
+3. **How to decide whether to use Comparable or Comparator?**
+   - Use Comparable when you want to impose a natural ordering on objects of a class and can modify the class code.
+   - Use Comparator when you want to define multiple sorting criteria, sort objects of classes you can't modify, or provide external sorting logic.
+
+4. **If we have a Student class loaded from an external library that we can't change, which one will you use for sorting: Comparable or Comparator?**
+   - In this case, since you can't modify the Student class to implement Comparable, you would use a Comparator for sorting.
+
+5. **What is Future in Java?**
+   - Future in Java represents the result of an asynchronous computation. It provides a way to retrieve the result of an asynchronous task, check if the computation is complete, and cancel the task if needed.
+
+6. **How to create a bean in Spring/Spring Boot?**
+   - In Spring/Spring Boot, you can create a bean by annotating a class with `@Component`, `@Service`, `@Repository`, or `@Controller`, depending on the type of bean. Spring's component scanning mechanism automatically detects and registers these beans.
+
+7. **What is meant by @Service annotation?**
+   - `@Service` is a specialization of the `@Component` annotation in Spring used to annotate classes that perform service tasks, such as business logic, transaction management, etc. It indicates that the annotated class is a service component.
+
+8. **How do you determine the size of the Spring Boot JAR and allocate the right size?**
+   - The size of the Spring Boot JAR depends on the dependencies, configurations, and resources included. You can estimate the size by building the JAR and checking its size. To allocate the right size, consider factors like the deployment environment, available resources, and application requirements.
+
+9. **What are the different logging levels, and which logging framework are you using in the project?**
+   - Different logging levels include DEBUG, INFO, WARN, ERROR, etc. In the project, we are using a logging framework like Log4j, Logback, or Java Util Logging (JUL).
+
+10. **Difference between HashMap and ConcurrentHashMap?**
+    - HashMap is not thread-safe and not suitable for concurrent access, whereas ConcurrentHashMap is thread-safe and designed for concurrent access by multiple threads.
+    - ConcurrentHashMap achieves thread-safety by using separate locks for each bucket, allowing multiple threads to read and write concurrently without blocking each other.
+
+11. **How to decide whether you need microservices or not? Should we always go for this architecture?**
+    - The decision to use microservices depends on factors like the size and complexity of the application, scalability requirements, team expertise, deployment flexibility, and organizational goals. Microservices are suitable for large-scale applications with diverse functionalities that can be independently developed, deployed, and scaled. However, it's not necessary to always go for a microservices architecture; simpler applications may benefit more from a monolithic architecture.
+
+12. **What is a partition in Kafka?**
+    - A partition in Kafka is a unit of parallelism and scalability. Topics in Kafka are divided into partitions, and each partition is an ordered and immutable sequence of records. Partitions allow Kafka to parallelize message consumption and storage across multiple brokers.
+
+13. **Describe how the pub-sub model works in Apache Kafka? How do producers and consumers acquire connections?**
+    - In the pub-sub (publish-subscribe) model in Kafka, producers publish messages to topics, and consumers subscribe to topics to receive messages. Producers acquire connections to Kafka brokers to send messages, while consumers acquire connections to consume messages from specified topics. Connections are managed by Kafka clients using configuration properties and the Kafka client library.
+
+14. **How does Kafka decide which consumer will be connected to which Kafka partition?**
+    - Kafka uses a group coordination protocol called the Group Coordinator to assign partitions to consumers within a consumer group. The assignment is based on the partition assignment strategy, which can be configurable (e.g., round-robin, range, sticky) or manually assigned by the consumer group coordinator.
+
+15. **Can a Kafka partition have more than one consumer connected to it?**
+    - Yes, a Kafka partition can have more than one consumer (within the same consumer group) connected to it. However, each message in the partition will be consumed by only one consumer within the same group (i.e., partitions are load-balanced among consumers).
+
+16. **Can a consumer consume messages from more than one Kafka partition?**
+    - Yes, a consumer in Kafka can consume messages from multiple partitions if it subscribes to topics with multiple partitions or is part of a consumer group where partitions are distributed among consumers.
+
+17. **What are the steps you will take to identify and resolve a production issue?**
+    - Identify the issue by analyzing logs, monitoring metrics, and understanding user reports.
+    - Reproduce the issue in a controlled environment if possible.
+    - Analyze the root cause by debugging, tracing, and analyzing system behavior.
+    - Develop and test a fix or workaround for the issue.
+    - Deploy the fix to production using proper release and deployment procedures.
+    - Monitor post-fix to ensure the issue is resolved and performance is stable.
+
+18. **How do you plan features in a project?**
+    - Feature planning involves identifying project goals, gathering requirements, prioritizing features based on business value and feasibility, breaking down features into tasks, estimating time and resources required, creating a project roadmap or backlog, and assigning responsibilities to team members.
+
+19. **How will you decide the time/effort required for a given feature in analysis, development, etc.?**
+    - Time and effort estimation for a feature involve considering factors like complexity, dependencies, scope, technology stack, team expertise, historical data, and risk assessment. Techniques such as story points, function points, and expert judgment can be used for estimation.
+
+20. **What is Jacoco? Its usage and full form? How is it used in your project?**
+    - JaCoCo (Java Code Coverage) is a code coverage tool used for measuring code coverage in Java applications. It generates coverage reports indicating which parts of the codebase are executed during testing. JaCoCo stands for Java Code Coverage.
+
+21. **Which code quality testing frameworks are you using?**
+    - In the project, we are using code quality testing frameworks like SonarQube, Checkstyle, FindBugs, PMD, JaCoCo for code coverage analysis, and JUnit or TestNG for unit testing.
+
+22. **List any 5 Linux commands you use in the project.**
+    - Some commonly used Linux commands in the project include:
+      - `ls` (list directory contents)
+      - `grep` (search text patterns)
+      - `chmod` (change file permissions)
+      - `mv` (move/rename files)
+      - `tail` (display the last part of a file)
+
+23. **Which AWS services are used in your project?**
+    - In the project, we are using various AWS services such as EC2 (Elastic Compute Cloud), RDS (Relational Database Service), S3 (Simple Storage Service), IAM (Identity and Access Management), Lambda, API Gateway, etc., for hosting, storage, security, serverless computing, and API management.
+
+24. **What is the default scope of a Spring bean? How can you change it?**
+    - The default scope of a Spring bean is Singleton, which means a single instance of the bean is created per container.
+    - You can change the scope of a Spring bean using annotations such as `@Scope("prototype")` for prototype scope (new instance per request), `@Scope("session")` for session scope (new instance per session), etc.
+
+25. **What are the different design patterns used in the project, apart from the singleton pattern?**
+    - In addition to the Singleton pattern, the project may use other design patterns such as Factory, Builder, Observer, Adapter, Decorator, Strategy, etc., depending on the requirements and design principles followed.
