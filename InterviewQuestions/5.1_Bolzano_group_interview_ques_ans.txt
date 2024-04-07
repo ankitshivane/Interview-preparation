@@ -18,3 +18,78 @@ Bolzano Group Telephonic interview Round-1 question
 16.	What is the type of stream if we create a Stream.of(new Object()[]);
 17.	What is the difference between terminal and intermediate operations in Stream?
 18.	In which scenario you will go for Monolithic architecture and when you will go for microservices architecture?
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Now Questions and Answer 
+
+Below are the answers to the interview questions in an organized format:
+
+1. **Features introduced in Java 8:**
+   - Lambda expressions
+   - Functional interfaces
+   - Stream API
+   - Default and static methods in interfaces
+   - Optional class
+   - Date and Time API (java.time package)
+   - Nashorn JavaScript Engine
+   - CompletableFuture for asynchronous programming
+
+2. **Meaning of Lambda expression:**
+   - Lambda expressions are anonymous functions that allow you to treat functionality as a method argument, or to create a concise way to represent instances of single-method interfaces (functional interfaces).
+
+3. **Difference between lambda expression and anonymous inner class:**
+   - Lambda expression provides a more concise syntax for writing anonymous functions compared to anonymous inner classes.
+   - Lambda expressions do not require explicitly defining types for parameters, whereas anonymous inner classes do.
+   - Lambdas can only be used with functional interfaces, whereas anonymous inner classes can implement any interface or extend any class.
+
+4. **Functional interface:**
+   - A functional interface is an interface that contains only one abstract method. It can have multiple default or static methods, but only one abstract method.
+
+5. **Output guess problems on functional interface with inheritance:**
+   - Example scenarios involving functional interfaces and inheritance where you need to predict the output based on method resolution and implementation in subclasses.
+
+6. **Usage of lambda expression with functional interfaces:**
+   - Lambda expressions are commonly used to write implementation for functional interfaces, as they provide a more concise and readable way to define behavior.
+
+7. **Effect of @FunctionalInterface annotation on parent and child interfaces:**
+   - The @FunctionalInterface annotation is used to ensure that an interface is a functional interface, i.e., it has only one abstract method.
+   - If both parent and child interfaces are annotated with @FunctionalInterface, it may lead to compilation errors if the combined interface doesn't adhere to the functional interface rules.
+
+8. **Pre-built functional interfaces in Java:**
+   - java.util.function package provides several pre-built functional interfaces such as Supplier, Consumer, Predicate, Function, etc.
+
+9. **Use of Supplier interface:**
+   - Supplier interface represents a supplier of results, and it does not accept any input but produces a result. It is commonly used for lazy initialization and generating values on demand.
+
+10. **Connection pooling in Spring Boot and how to define a connection pool:**
+    - Connection pooling is a technique used to manage and reuse database connections to improve performance and reduce resource usage.
+    - In Spring Boot, you can define a connection pool by configuring properties in the application.properties or application.yml file, such as spring.datasource.url, spring.datasource.username, spring.datasource.password, spring.datasource.driver-class-name, spring.datasource.hikari.* (for HikariCP configuration).
+
+11. **Serializer used in Apache Kafka:**
+    - The serializer used in Apache Kafka depends on the type of data being produced or consumed. Common serializers include StringSerializer, JsonSerializer, ByteArraySerializer, etc.
+
+12. **Topic in Kafka:**
+    - A topic in Kafka is a category or feed name to which records are published by producers and from which records are consumed by consumers. Topics in Kafka are partitioned for scalability and fault tolerance.
+
+13. **Microservice architecture explanation:**
+    - Microservice architecture is an architectural style where an application is composed of small, independent, and loosely coupled services that communicate via APIs. Each microservice focuses on a specific business capability and can be deployed, scaled, and maintained independently.
+
+14. **Data type of an object in Stream of Java 8:**
+    - The data type of an object in a Stream of Java 8 is the type of the elements in the Stream.
+
+15. **Data type and applicability of Stream.of("Hello World"):**
+    - The data type of the stream created by Stream.of("Hello World") is Stream<String>.
+    - It contains only one value in the stream, making it applicable for stream pipeline operations.
+
+16. **Type of stream for Stream.of(new Object[][]):**
+    - The type of stream created by Stream.of(new Object[][]{}) is Stream<Object[]>, representing a stream of arrays of objects.
+
+17. **Difference between terminal and intermediate operations in Stream:**
+    - Intermediate operations (such as filter, map, etc.) return a new stream and are lazy evaluated (not executed until a terminal operation is invoked).
+    - Terminal operations (such as forEach, collect, reduce, etc.) produce a non-stream result and trigger the stream pipeline to execute.
+
+18. **Scenarios for Monolithic vs. Microservices architecture:**
+    - Monolithic architecture is suitable for small-scale applications with simple requirements, low complexity, and a small team of developers.
+    - Microservices architecture is suitable for large-scale applications with complex requirements, high scalability, and a need for independent deployment, scaling, and maintenance of services.
+
