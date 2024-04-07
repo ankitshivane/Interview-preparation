@@ -1,0 +1,20 @@
+Bolzano Group Telephonic interview Round-1 question
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+1.	what are the features introduced in Java 8?
+2.	What is the meaning of Lambda expression?
+3.	What is the difference between lambda expre and anonymous inner class?
+4.	What is functional interface?
+5.	Different output quess problems on functional interface with inheritance? (so study this also)
+6.	Do you use lambda expression only to write implementation for functional interfaces ?
+7.	What if we use @FunctionalInterface annotation on parent and child interface ?
+8.	What are the different pre built functional interface ?
+9.	What is the use of supplier interface ?
+10.	What is connection pooling in spring boot and how do you define a connection pool ?
+11.	Which serializer you have used in project for Apache Kafka ?
+12.	What is topic in kafka?
+13.	Explain microservie architecture?
+14.	What is the data type of a object in stream of java 8?
+15.	What if we write Stream.of(“Hello World”); then what is the data type of the stream and as it contains only one value in stream so is it applicable for stream pipeline?
+16.	What is the type of stream if we create a Stream.of(new Object()[]);
+17.	What is the difference between terminal and intermediate operations in Stream?
+18.	In which scenario you will go for Monolithic architecture and when you will go for microservices architecture?
