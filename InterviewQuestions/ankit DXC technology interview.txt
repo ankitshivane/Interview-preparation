@@ -16,7 +16,7 @@ DXC technology
 11. what are the different types of garbage collectors and how many ways we can make eligible java object can be garbage collected?
 12. what are the different ways to create java object?
 13. What is serialization and deserialization in java ?
-
+14. what are rhe different memory area in java ? and describe about Heap memory and stack memory area?
 
 CODING questions
 Streams
