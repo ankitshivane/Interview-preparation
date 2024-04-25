@@ -13,7 +13,7 @@ DXC technology
 8. what is predicate and Function interface
 9. what is optional keyword and how to write it?
 10. what is stream in java 8?
-
+11. what are the different types of garbage collectors and how many ways we can make eligible java object can be garbage collected?
 
 
 CODING questions
