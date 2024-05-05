@@ -1,0 +1,4 @@
+I'm Ankit Shivane
+Working as a Java Backend developer at Tata consultancy services Ltd at Mumbai City with over 6 years of experience in designing, developing, and deploying robust backend systems using microservices architecture.developing  RESTful APIs, working with databases like PostgreSQL, And in memory database such as Redis.and implementing message queuing systems like Apache Kafka and RabbitMQ for various purposes such as communication between microservices, consuming and processing external events in the form of msg and deploying those microservices using Jenkins, docker like tools and techniques.
+
+My technical skills include proficiency in Java 8, Spring Boot, Hibernate, JPA, REST APIs, PostgreSQL, MySQL, Redis, Apache Kafka, RabbitMQ, Junit, Mockito, Git, Maven, Jenkins, Docker, AWS, and more. I hold a Bachelor of Science degree in Information Technology from the University of Mumbai.
