@@ -6,7 +6,7 @@ Working as a Java Backend developer at Tata consultancy services Ltd at Mumbai C
 
 My technical skills include proficiency in Java 8, Spring Boot, Hibernate, JPA, REST APIs, PostgreSQL, MySQL, Redis, Apache Kafka, RabbitMQ, Junit, Mockito, Git, Maven, Jenkins, Docker, AWS, and more. I hold a Bachelor of Science degree in Information Technology from the University of Mumbai.
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Question 2. What are your different roles and responsibilities?
 Answer:
@@ -20,3 +20,101 @@ Based on the experience of being a Java Backend Developer with 6 years of experi
 6. Analyze user requirements to define business objectives
 7. Ensure application designs conform with business goals
 8. I focus on optimizing backend performance by implementing caching strategies using Redis, and identifying and resolving performance bottleneck
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Question 3. explain me project flow for ui, backend etc?
+Answer:
+
+
+**Project Flow for UI and Backend Development:**
+
+1. **Requirement Gathering and Analysis:**
+   - The project typically begins with gathering requirements from stakeholders and analyzing them to understand the scope and objectives of the system.
+
+2. **UI Design and Development:**
+   - The UI development process involves designing user interfaces based on wireframes and mockups created during the design phase. Frontend technologies like HTML, CSS, JavaScript, and Angular are used to develop responsive and user-friendly interfaces.
+   - The UI development team collaborates closely with UX designers to ensure a seamless user experience.
+
+3. **Backend Development:**
+   - Concurrently, the backend development team starts working on developing the core functionality of the system. As a Senior Java Backend Developer, my role involves:
+     - Designing and developing highly performant RESTful APIs for communication between the frontend and backend systems.
+     - Integrating third-party APIs and services for functionalities like IVR data processing and email notifications.
+     - Writing unit tests using Junit and Mockito frameworks to ensure code reliability and maintainability, achieving 80% code coverage.
+     - Implementing Apache Kafka for microservices decoupling and ensuring data consistency through transactional microservices.
+     - Dockerizing Spring Boot microservices with Dockerfile and implementing property externalization using AWS Secret Manager for secure and scalable deployment on AWS cloud infrastructure.
+     - Utilizing Liquibase for managing future database schema changes in a version-controlled manner.
+
+4. **Integration and Testing:**
+   - Once both UI and backend components are developed, they are integrated to create a fully functional system. Integration testing is conducted to ensure that all components work together seamlessly.
+   - Continuous integration (CI) tools like Jenkins are used to automate the build and deployment processes, ensuring that code changes are tested and deployed efficiently.
+
+5. **Quality Assurance and Testing:**
+   - Quality assurance teams conduct various tests, including unit testing, integration testing, and system testing, to identify and fix bugs, ensure functionality, and validate performance.
+   - Tools like SonarQube and App Dynamics are used for code quality analysis and application performance monitoring.
+
+6. **Deployment and Maintenance:**
+   - After successful testing, the application is deployed to production or staging environments. DevOps practices are followed for continuous deployment and monitoring.
+   - Post-deployment, the system undergoes maintenance and support to address any issues, apply updates, and ensure ongoing functionality and performance.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Question 4. How are you utilizing Apache kafka in your project?
+Answer:
+
+Event Publishing and Consumption: In the backend system, certain events such as order processing, data updates, or notifications are published to Kafka topics by producer services. These events are then consumed by consumer services that perform specific actions or processes based on the received events.
+Data Consistency and Fault Tolerance: Apache Kafka's distributed nature ensures data consistency and fault tolerance. Messages published to Kafka topics are replicated across multiple brokers, providing redundancy and reliability. This helps maintain data integrity and ensures that messages are not lost even in the event of broker failures.
+Microservices Decoupling: By using Apache Kafka, microservices are decoupled from each other's internal workings. They only need to be aware of the topics they produce or consume, reducing dependencies and simplifying service interactions. This decoupling enhances system scalability, resilience, and maintainability.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Question 4. What is SOLID design principles and how you used in your project?
+Answer:
+The SOLID principles are a set of design principles in object-oriented programming that promote software design that is easy to understand, maintain, and extend. Each letter in SOLID stands for a different principle:
+
+1. **Single Responsibility Principle (SRP):** A class should have only one reason to change, meaning it should have a single responsibility or function within the system.
+
+2. **Open/Closed Principle (OCP):** Software entities (classes, modules, functions, etc.) should be open for extension but closed for modification. This means that you can add new functionality to existing code without altering its existing behavior.
+
+3. **Liskov Substitution Principle (LSP):** Objects of a superclass should be replaceable with objects of its subclasses without affecting the correctness of the program. This principle ensures that derived classes can be used interchangeably with their base classes.
+
+4. **Interface Segregation Principle (ISP):** Clients should not be forced to depend on interfaces they don't use. This principle advocates for small, specific interfaces rather than large, general-purpose ones.
+
+5. **Dependency Inversion Principle (DIP):** High-level modules should not depend on low-level modules. Both should depend on abstractions (e.g., interfaces). Additionally, abstractions should not depend on details; details should depend on abstractions.
+
+In my project, I applied the SOLID principles in the following ways:
+
+1. **Single Responsibility Principle (SRP):** Each class and module in the backend system had a single responsibility, such as handling RESTful API requests, processing data, or managing database interactions. This helped in maintaining clear and focused code that was easier to understand and modify.
+
+2. **Open/Closed Principle (OCP):** I followed design patterns like the Strategy Pattern and Dependency Injection to adhere to the Open/Closed Principle. For example, by using interfaces and dependency injection, I could extend the functionality of classes without modifying their existing code.
+
+3. **Liskov Substitution Principle (LSP):** Inheritance and polymorphism were used in a way that allowed subclasses to be substituted for their base classes without affecting the behavior of the system. This ensured that the system remained flexible and scalable.
+
+4. **Interface Segregation Principle (ISP):** I designed interfaces that were specific to the needs of the classes that implemented them. This avoided the problem of clients depending on unnecessary interface methods, promoting a more modular and maintainable codebase.
+
+5. **Dependency Inversion Principle (DIP):** By using dependency injection and designing classes to depend on abstractions (interfaces) rather than concrete implementations, I achieved loose coupling between components. This made the system more flexible, testable, and easier to modify or extend.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
