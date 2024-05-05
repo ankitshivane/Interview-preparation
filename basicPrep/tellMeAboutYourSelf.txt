@@ -1,4 +1,22 @@
+Question 1. Tell Me About Yourself?
+Answer:
+
 I'm Ankit Shivane
 Working as a Java Backend developer at Tata consultancy services Ltd at Mumbai City with over 6 years of experience in designing, developing, and deploying robust backend systems using microservices architecture.developing  RESTful APIs, working with databases like PostgreSQL, And in memory database such as Redis.and implementing message queuing systems like Apache Kafka and RabbitMQ for various purposes such as communication between microservices, consuming and processing external events in the form of msg and deploying those microservices using Jenkins, docker like tools and techniques.
 
 My technical skills include proficiency in Java 8, Spring Boot, Hibernate, JPA, REST APIs, PostgreSQL, MySQL, Redis, Apache Kafka, RabbitMQ, Junit, Mockito, Git, Maven, Jenkins, Docker, AWS, and more. I hold a Bachelor of Science degree in Information Technology from the University of Mumbai.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Question 2. What are your different roles and responsibilities?
+Answer:
+
+Based on the experience of being a Java Backend Developer with 6 years of experience in developing Java Spring Boot based microservices, here are some potential roles and responsibilities:
+1. Designing and developing RESTful APIs: I am responsible for designing and implementing RESTful APIs that facilitate seamless communication between various services 
+2. Designing and implementing microservices which use the spring boot framework.
+3. Connecting microservices to interact with databases.
+4. Understanding and implementing streaming technologies such as Kafka.
+5. Identifying and finding solutions to bugs
+6. Analyze user requirements to define business objectives
+7. Ensure application designs conform with business goals
+8. I focus on optimizing backend performance by implementing caching strategies using Redis, and identifying and resolving performance bottleneck
