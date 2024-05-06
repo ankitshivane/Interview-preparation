@@ -1,0 +1,56 @@
+1st L1 technical interview round at Wipro taken by Vikas kumar pathak. interview date and time 06/05/2024 at 2:00 to 2:30 PM
+
+1. Tell me about yourself? skills? and experience?
+2. what is the default scope of a Spring bean?
+3. how to change the default scope of a bean?
+4. Lets say there is a Interface Driver and two classes implementing this interface such as (OracleDriver and MySQLDriver) and we autowired the Driver interface somewhere
+then there is a chance that we get ambiguity so how will we resolve the ambiguity?
+5. what are the interceptor in java?
+6. what is @Bean annotation do? explain it
+7. what is supplier in java ?
+8. WHat is default method in java and why we use it?
+9. can we extend string class in java ? and override any method from it?
+10. If there is a Employee class and having some methods and we create a Object of that employee class in some other class such as 
+Employeee e=new EMployee() then how many method we can access using object "e"
+11. Explain System.out.println()
+12. how many methods available apart from println()? ( he was trying to ask method overloading)? and what are the different primitive data type in java?
+13. Coding question:
+List<String> l=new Arraylist<String>();
+l.add("124566688545");
+l.add("testg455hsh");
+l.add("onlyteststring");
+
+now write a program to filter out the data and get only numbers based values.
+Answer:
+
+public class Main {
+    public static void main(String[] args) {
+        List<String> mixedList = new ArrayList<>();
+        mixedList.add("123");
+        mixedList.add("abc");
+        mixedList.add("456");
+        mixedList.add("def");
+
+        List<String> numbersOnly = new ArrayList<>();
+        for (String str : mixedList) {
+            if (str.matches("\\d+")) {
+                numbersOnly.add(str);
+            }
+        }
+
+        System.out.println("Numbers Only: " + numbersOnly);
+/*
+OR USING JAVA STREAM
+
+ List<String> numbersOnly = mixedList.stream()
+                .filter(s -> s.matches("\\d+")) // Filter only strings containing numbers
+                .collect(Collectors.toList());
+
+        System.out.println("Numbers Only: " + numbersOnly);
+*/
+    }
+}
+
+
+14. what is the default type of a request body of a rest api in spring boot?
+15. how to change the input type from JSON to XML of a rest api in spring boot?
