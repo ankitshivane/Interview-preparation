@@ -54,3 +54,4 @@ OR USING JAVA STREAM
 
 14. what is the default type of a request body of a rest api in spring boot?
 15. how to change the input type from JSON to XML of a rest api in spring boot?
+16. what is ConcurrentModificationException and when does it occur?
