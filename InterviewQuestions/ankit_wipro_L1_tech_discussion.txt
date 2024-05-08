@@ -56,3 +56,4 @@ OR USING JAVA STREAM
 15. how to change the input type from JSON to XML of a rest api in spring boot?
 16. what is ConcurrentModificationException and when does it occur?
 17. what are the different design patterns you have used in project?
+18. where do we store the Object of Object class in java memory?
