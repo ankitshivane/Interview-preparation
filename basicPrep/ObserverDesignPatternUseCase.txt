@@ -1,1 +1,98 @@
 Observer Design pattern:
+Use case: notify subscribed clients immediately when a new appointment slot or early appointment becomes available so that they can reschedule their appointment to this early slot.Early slot can be available in case if someone cancels there existing appointment or reschedule their appointment to new date and time slot.While booking an appointment we provided an option to select if the user wants to be notified when new slot become available, If he selected that then user will be notified for the early slot notification.
+
+1. Explanation of Observer Pattern:
+The Observer pattern is a behavioral design pattern where an object, known as the subject, maintains a list of its dependents, called observers, and notifies them of any state changes, typically by calling one of their methods.
+
+2. Components in the Context of MOH Centralized Appointment System:
+Subject: The centralized appointment system component that manages appointment slots.
+Observer: Subscribed clients or users who are interested in being notified of new appointment slots.
+
+3. Implementation Steps:
+Define Subject Interface: Create an interface AppointmentSystemSubject with methods like subscribeObserver, unsubscribeObserver, and notifyObservers for subscribing, unsubscribing, and notifying observers.
+Implement Subject: Create a class CentralAppointmentSystem that implements AppointmentSystemSubject. This class manages the list of subscribed observers and handles notifications.
+Define Observer Interface: Create an interface AppointmentSlotObserver with a method update that takes the new appointment slot information as a parameter.will contain method for updating observers about new appointment slots.
+Implement Observers: Clients or users who subscribe to notifications implement the AppointmentSlotObserver interface.  
+
+4.  Subscription and Notification Flow:
+Subscription: When a client wants to subscribe for notifications:
+Code: centralAppointmentSystem.subscribeObserver(client);
+Notification: When a new appointment slot becomes available:
+Code: centralAppointmentSystem.notifyObservers(newAppointmentSlot);
+The notifyObservers method iterates through the list of subscribed observers and calls their update method, passing the new appointment slot information.
+
+5. Benefits of Observer Pattern in this Context:
+Real-time Notifications: Subscribed clients receive immediate notifications when new appointment slots are available, enhancing user experience.
+Decoupling: The Observer pattern helps in decoupling the subject (appointment system) from its observers (subscribed clients), allowing for easier maintenance and scalability.
+Flexibility: Clients can easily subscribe or unsubscribe from notifications based on their preferences. On Appointment history page there was option to unsubscribe for this notification if user unselect that then he will be unsubscrive from the list.
+Code for defining interface:
+interface AppointmentSystemSubject {
+    void subscribeObserver(AppointmentSlotObserver observer);
+    void unsubscribeObserver(AppointmentSlotObserver observer);
+    void notifyObservers(AppointmentSlot newAppointmentSlot);
+}
+
+interface AppointmentSlotObserver {
+    void update(AppointmentSlot newAppointmentSlot);
+}
+
+Implement Subject:
+class CentralAppointmentSystem implements AppointmentSystemSubject {
+    private List<AppointmentSlotObserver> observers = new ArrayList<>();
+
+    @Override
+    public void subscribeObserver(AppointmentSlotObserver observer) {
+        observers.add(observer);
+    }
+
+    @Override
+    public void unsubscribeObserver(AppointmentSlotObserver observer) {
+        observers.remove(observer);
+    }
+
+    @Override
+    public void notifyObservers(AppointmentSlot newAppointmentSlot) {
+        for (AppointmentSlotObserver observer : observers) {
+            observer.update(newAppointmentSlot);
+        }
+    }
+}
+
+Implement Observer:
+class Client implements AppointmentSlotObserver {
+    @Autowired
+    private JavaMailSender javaMailSender;
+
+    @Override
+    public void update(String userEmail, AppointmentSlot newAppointmentSlot) {
+        // Logic to send email notification to the user
+        SimpleMailMessage message = new SimpleMailMessage();
+        message.setTo(userEmail);
+        message.setSubject("New Appointment Slot Available");
+        message.setText("A new appointment slot is available: " + newAppointmentSlot);
+        javaMailSender.send(message);
+    }
+}
+
+Below class will check for the availability of the new slot if it becomes available it will trigger the flow:
+// Example usage in a controller or service class
+@Service
+public class AppointmentService {
+
+    @Autowired
+    private CentralAppointmentSystem centralAppointmentSystem;
+
+    // Method to check for new appointment slots and notify subscribers
+    public void checkAndNotifySubscribers(AppointmentSlot newAppointmentSlot) {
+        // Check if new appointment slot is available
+        if (isNewSlotAvailable(newAppointmentSlot)) {
+            centralAppointmentSystem.notifyObservers(newAppointmentSlot);
+        }
+    }
+
+    // Dummy method to simulate checking new appointment slot availability
+    private boolean isNewSlotAvailable(AppointmentSlot newAppointmentSlot) {
+        // Logic to check if the new appointment slot is available
+        return true; // For demonstration purposes
+    }
+}
