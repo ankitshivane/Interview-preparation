@@ -1,0 +1,153 @@
+Builder Design pattern:
+
+Use Case Name: Generate Reports for Administrators and Healthcare Providers
+
+Actors:
+
+Administrator
+Healthcare Provider
+Goal:
+The goal of this use case is to allow administrators and healthcare providers to generate customized reports by selecting various attributes. The system should search the database based on the selected attributes and return the result as a report.
+
+Preconditions:
+
+The user is logged into the MOH Centralized Appointment System.
+The user has appropriate permissions to generate reports.
+Main Success Scenario:
+
+The user (Administrator or Healthcare Provider) selects the option to generate a report.
+The system presents a report generation form with various attributes such as date range, patient demographics, appointment types, referral status, etc.
+The user selects the desired attributes for the report.
+The user chooses the format of the report (e.g., PDF, Excel, CSV).
+The user submits the report generation request.
+The system validates the selected attributes and format.
+The system uses the Builder design pattern to construct a query object based on the selected attributes.
+The system executes the query against the database to fetch the relevant data.
+The system formats the retrieved data into the chosen report format (PDF, Excel, CSV).
+The system presents the generated report to the user for download or viewing.
+Postconditions:
+
+The user can download or view the generated report as per the selected format.
+The system logs the report generation activity for audit purposes.
+Alternative Flow:
+
+If the selected attributes are invalid or incompatible, the system displays an error message and prompts the user to correct the selections.
+If there is a technical issue during report generation or database query execution, the system notifies the user and logs the error for investigation.
+Exceptional Flow:
+
+If the user's session expires or they are logged out during the report generation process, the system redirects them to the login page and prompts them to log in again before continuing.
+
+Certainly! Here's an example code snippet demonstrating the Builder design pattern for constructing a query object to generate reports in the MOH Centralized Appointment System:
+
+import java.util.List;
+
+// ReportQuery class using Builder pattern
+public class ReportQuery {
+    private String dateRange;
+    private List<String> patientAttributes;
+    private List<String> appointmentTypes;
+    private String referralStatus;
+
+    // Private constructor to prevent direct instantiation
+    private ReportQuery(QueryBuilder builder) {
+        this.dateRange = builder.dateRange;
+        this.patientAttributes = builder.patientAttributes;
+        this.appointmentTypes = builder.appointmentTypes;
+        this.referralStatus = builder.referralStatus;
+    }
+
+    // Getters for query attributes
+    public String getDateRange() {
+        return dateRange;
+    }
+
+    public List<String> getPatientAttributes() {
+        return patientAttributes;
+    }
+
+    public List<String> getAppointmentTypes() {
+        return appointmentTypes;
+    }
+
+    public String getReferralStatus() {
+        return referralStatus;
+    }
+
+    // ReportQuery Builder class
+    public static class QueryBuilder {
+        private String dateRange;
+        private List<String> patientAttributes;
+        private List<String> appointmentTypes;
+        private String referralStatus;
+
+        public QueryBuilder setDateRange(String dateRange) {
+            this.dateRange = dateRange;
+            return this;
+        }
+
+        public QueryBuilder setPatientAttributes(List<String> patientAttributes) {
+            this.patientAttributes = patientAttributes;
+            return this;
+        }
+
+        public QueryBuilder setAppointmentTypes(List<String> appointmentTypes) {
+            this.appointmentTypes = appointmentTypes;
+            return this;
+        }
+
+        public QueryBuilder setReferralStatus(String referralStatus) {
+            this.referralStatus = referralStatus;
+            return this;
+        }
+
+        public ReportQuery build() {
+            return new ReportQuery(this);
+        }
+    }
+
+    // Usage example
+    public static void main(String[] args) {
+        // Create a ReportQuery using Builder pattern
+        ReportQuery reportQuery = new ReportQuery.QueryBuilder()
+                .setDateRange("2024-01-01 to 2024-12-31")
+                .setPatientAttributes(List.of("Name", "Age", "Gender"))
+                .setAppointmentTypes(List.of("Consultation", "Lab Test"))
+                .setReferralStatus("Pending")
+                .build();
+
+        // Print query attributes
+        System.out.println("Date Range: " + reportQuery.getDateRange());
+        System.out.println("Patient Attributes: " + reportQuery.getPatientAttributes());
+        System.out.println("Appointment Types: " + reportQuery.getAppointmentTypes());
+        System.out.println("Referral Status: " + reportQuery.getReferralStatus());
+    }
+}
+
+
+In this code:
+
+We have a ReportQuery class with private attributes representing the query criteria for generating reports.
+The QueryBuilder inner class is used to construct a ReportQuery object using the Builder design pattern.
+The QueryBuilder class provides setter methods for setting query attributes and a build() method to create the ReportQuery object.
+In the main method, we demonstrate how to use the Builder pattern to create a ReportQuery object with specific query attributes.
+
+----------------------------------------------------------------------------------------------------------------------------
+
+Let's break down the advantages of using the Builder design pattern in the context of the provided code example for creating a `ReportQuery` object:
+
+1. **Flexibility**:
+   - The Builder pattern offers flexibility in constructing objects with multiple attributes. Each setter method in the `QueryBuilder` class allows us to set individual attributes of the `ReportQuery` object independently. This flexibility enables us to customize the query criteria based on specific report generation requirements without having a constructor with a long list of parameters or overloaded constructors.
+
+2. **Readability**:
+   - The Builder pattern enhances code readability by providing clear and self-explanatory method names in the `QueryBuilder` class. For example, `setDateRange`, `setPatientAttributes`, `setAppointmentTypes`, and `setReferralStatus` are descriptive method names that convey their purpose. This makes it easier for developers to understand and maintain the code, especially when dealing with complex object creation logic.
+
+3. **Step-by-step Construction**:
+   - With the Builder pattern, object construction occurs in a step-by-step manner. Each setter method call in the builder class adds a specific attribute to the object being built. This step-by-step approach allows for a more structured and organized way of constructing objects, particularly useful when dealing with objects that have a large number of attributes or optional parameters.
+
+4. **Clear and Concise Code**:
+   - By using the Builder pattern, the code for creating a `ReportQuery` object is clear and concise. Instead of a constructor with numerous parameters or complex initialization logic, the builder class abstracts away the object creation details, resulting in cleaner and more maintainable code. The `build()` method acts as a final step that assembles the constructed object, encapsulating the construction process internally.
+
+5. **Tailored Object Creation**:
+   - The Builder pattern allows us to tailor object creation to specific requirements. In our example, we can easily create a `ReportQuery` object with different combinations of date ranges, patient attributes, appointment types, and referral status based on the needs of generating different reports. This customization capability ensures that the object creation process is adaptable and scalable to various scenarios.
+
+Overall, the Builder design pattern brings several benefits to the table, including flexibility, readability, step-by-step construction, clear code organization, and tailored object creation. These advantages make it a valuable pattern for creating complex objects with multiple attributes in a way that is both efficient and maintainable.
