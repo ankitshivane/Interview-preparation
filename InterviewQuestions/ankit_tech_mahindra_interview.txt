@@ -1,1 +1,32 @@
 Interview happened on 08 May 2024 at 3:00 PM to 3:45 PM for the Tech Lead position interviewer was Pranav jatala and HR Deepa
+
+1. What is microservices and why we should use it?
+2. What is vertical scaling 
+3. What is saga design patterns 
+4. What is circuit breaker pattern 
+5. How microservices communication happen?
+6. What is resttemplate 
+7. How to we deploy spring boot application and do we use jar or war for that
+8. What is spring boot and what are the advantages of it
+9. What is starter dependency 
+10. What is actuator and what are the different endpoint of it
+11. In which dependency injection the we get exception if the dependency is not found
+12. Which design patterns use by spring data jpa internally 
+13. What is functional interface 
+14. What is an immutable class in java and how to create it
+15. What are the different oops concept you have used in your project and how?
+16. Difference between find and find any
+17. What are the terminal operation in stream and which all are the terminal operator 
+18. What is @springbootapplication annotation 
+19. What is @componentscan annotation 
+20. What is message converters 
+21. What is resttemplate 
+22. Difference between put vs post 
+23. What are the different status code and difference between 200 and 201 status code
+24. In circuit breaker what is half open state
+25. What is spring cloud config server and how it manages external configuration
+
+Coding Questions on Java Streams:
+1. convert an employee list to Set using java Streams
+2. from a list of Employee fetch all employee having Location as Mumbai
+3. sort an employee list by employee id
