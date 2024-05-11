@@ -1,0 +1,30 @@
+below are the HCL first round interview question happened on 11 May at 10 AM
+
+1. Explain request flow in your application 
+2. How requirements Designing and planning is done in your project 
+3. What are the different features of Java 8 
+4. What is lambda function 
+5. What is functional interface 
+6. How lambda expression and functional interface are related to each other
+7. What is method reference 
+8. What is the difference between find any and find first
+9. What is streams in Java and how it is different than collection in Java
+10. What are the advantages of spring boot over spring 
+11. What is circut breaker pattern 
+12. What are the different design pattern involved in developing spring boot app 
+13. How to implement a circuit breaker pattern 
+14. What are profiles in spring boot 
+15. What is meant by embedded server and why we needed it
+16. Difference between @RequestMapping and @getmapping
+17. What is @Id annotations
+18. How to create a custom repository in spring boot 
+19. How authentication of api is done your application 
+20. Why junit is needed
+21. What are the different annotations used in Junit
+22. How to write a Junit for addition of two methods in Java
+23. How to print 5 random number using foreach 
+24. How to print distinct element from list using streamse
+25. How to get highest number from list of number using streams 
+26. How does exception and error  handling done in spring boot
+27. What is streams in java and how does it different from collection
+28. what is the purpose of serial version UID in class in serialization
