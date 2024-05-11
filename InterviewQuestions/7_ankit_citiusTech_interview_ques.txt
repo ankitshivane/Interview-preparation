@@ -1,0 +1,16 @@
+below are the CitiusTech first round interview question happened on 11 May at 2 PM
+
+1. Difference between spring boot 2 vs spring boot 3
+2. Supose I have class with more field and json with less field does mapping json to this class give any error or it will work
+3. How to dockerize spring boot application 
+4. Write the content for the docker file 
+5. Explain the docker build and docker run command
+6. How to change the key of the application property file at run time without restarting the application 
+7. What are the different ways to do the microsrrvices communication 
+8. What are the different design pattern you used in spring boot microsrrvices 
+9. What is solid design principles explain with an example
+10. Difference between string buffer vs string builder
+11. Coding questions: for a string string reverse the content of a string and print them character wise
+12. What are the different APIs provided by Apache Kafka 
+13. What is the default message store time in Kafka topic
+14. What is the maximum number of size of a Kafka message
