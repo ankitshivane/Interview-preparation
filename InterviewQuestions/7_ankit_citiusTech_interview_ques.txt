@@ -42,3 +42,49 @@ During your interview, you can highlight these major changes introduced in Sprin
 6. **Dependency Upgrades:** Spring Boot 3 updates many underlying dependencies to their latest versions, potentially offering security improvements and bug fixes. (Spring Boot 2 used older versions of some dependencies)
 
 7. **Miscellaneous Changes and Deprecations:** Spring Boot 3 introduces various smaller changes and deprecations. Be sure to consult the Spring Boot documentation for a complete list. (Spring Boot 2 had its own set of features and deprecations)
+
+
+
+2. Content of your Dockerfile for dockerizing spring boot application?
+answer:
+Dockerfile:
+# Start with a base image containing Java runtime
+FROM openjdk:11-jdk-slim
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the packaged Spring Boot application JAR file into the container at the defined working directory
+COPY target/my-spring-boot-app.jar /app/my-spring-boot-app.jar
+
+# Expose the port that the Spring Boot application will be running on
+EXPOSE 8080
+
+# Define a build-time argument for specifying the environment name
+ARG ENVIRONMENT
+
+# Retrieve secrets from AWS Secrets Manager based on the specified environment
+RUN aws secretsmanager get-secret-value --secret-id your-secret-id --query SecretString --output text > secrets.properties
+
+# Copy the secrets.properties file into the container
+COPY secrets.properties /app/secrets.properties
+
+# Command to run the Spring Boot application when the container starts
+CMD ["java", "-jar", "my-spring-boot-app.jar", "--spring.profiles.active=${ENVIRONMENT}"]
+
+
+docker build command:
+docker build -t my-spring-boot-app --build-arg ENVIRONMENT=dev --build-arg AWS_ACCESS_KEY_ID=your-access-key-id --build-arg AWS_SECRET_ACCESS_KEY=your-secret-access-key --build-arg AWS_DEFAULT_REGION=your-region .
+
+info: When building the Docker image, pass the environment name argument using the --build-arg option in the docker build command
+
+docker run command:
+docker run -p 8080:8080 -e AWS_ACCESS_KEY_ID=your-access-key-id -e AWS_SECRET_ACCESS_KEY=your-secret-access-key -e AWS_DEFAULT_REGION=your-region my-spring-boot-app
+
+info: When running the Docker container, make sure to pass the necessary environment variables (AWS credentials and region) to the container using the -e option in the docker run command.
+
+
+
+3. 
+
+
