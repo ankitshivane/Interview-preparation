@@ -16,3 +16,29 @@ below are the CitiusTech first round interview question happened on 11 May at 2 
 14. What is the maximum number of size of a Kafka message
 15. How to change the key in application.properties at runtime while application is running without restarting the application?
 16. what is marker interface in Java?
+
+-----------------
+
+answers 
+
+1. 1. Difference between spring boot 2 vs spring boot 3
+answer:
+Here's a breakdown of the key differences between Spring Boot versions 2 and 3, tailored for an interview response:
+
+**Spring Boot 2 vs. Spring Boot 3: Key Feature Differences**
+
+During your interview, you can highlight these major changes introduced in Spring Boot 3:
+
+1. **Java 17 Baseline:** Spring Boot 3 requires Java 17 or higher. This allows developers to leverage the latest performance improvements and language features offered by Java 17. (Spring Boot 2 supported Java 8 or higher)
+
+2. **GraalVM Native Image Support:** Spring Boot 3 introduces built-in support for generating native images using GraalVM. Native images are ahead-of-time compiled executables that can significantly improve startup performance, especially for microservices deployments. (Spring Boot 2 did not have native image support by default)
+
+3. **Improved Observability with Micrometer and Micrometer Tracing:** Spring Boot 3 includes an enhanced Micrometer dependency for better application monitoring. It also introduces Micrometer Tracing for distributed tracing capabilities, simplifying application performance analysis across microservices. (Spring Boot 2 offered Micrometer for basic monitoring, but tracing required additional configuration)
+
+4. **Jakarta EE 10 Support:** Spring Boot 3 aligns with the Jakarta EE 10 standard, ensuring compatibility with the latest enterprise Java APIs. (Spring Boot 2 supported Jakarta EE 8)
+
+5. **Spring Framework 6:** Spring Boot 3 upgrades to Spring Framework 6, which brings improvements in reactive programming support, web development enhancements, and overall framework modernization. (Spring Boot 2 used Spring Framework 5)
+
+6. **Dependency Upgrades:** Spring Boot 3 updates many underlying dependencies to their latest versions, potentially offering security improvements and bug fixes. (Spring Boot 2 used older versions of some dependencies)
+
+7. **Miscellaneous Changes and Deprecations:** Spring Boot 3 introduces various smaller changes and deprecations. Be sure to consult the Spring Boot documentation for a complete list. (Spring Boot 2 had its own set of features and deprecations)
