@@ -95,6 +95,22 @@ Some common examples of marker interfaces in Java include:
 A. java.io.Serializable  interface is a marker interface used to indicate that a class can be serialized, i.e., its objects can be converted into a byte stream for storage or transmission.
 B. Cloneable Interface: The java.lang.Cloneable interface is a marker interface used to indicate that a class supports cloning, i.e., creating a copy of its objects.
 ------------------------------------------------------------------------------------------------------------------------------------------------
+11. Coding questions: for a string string reverse the content of a string and print them character wise
+
+Anwer:
+
+public class StringReverseWithStreams {
+    public static void main(String[] args) {
+        String inputString = "Hello, World!";
+        
+        // Reverse the string and convert it to a character stream
+        inputString = new StringBuilder(inputString).reverse().toString();
+        inputString.chars()
+                   .mapToObj(ch -> (char) ch)  // Convert int to char
+                   .forEach(System.out::println);  // Print each character
+    }
+}
+
 ------------------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------------
