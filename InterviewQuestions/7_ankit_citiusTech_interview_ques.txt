@@ -15,3 +15,4 @@ below are the CitiusTech first round interview question happened on 11 May at 2 
 13. What is the default message store time in Kafka topic
 14. What is the maximum number of size of a Kafka message
 15. How to change the key in application.properties at runtime while application is running without restarting the application?
+16. what is marker interface in Java?
