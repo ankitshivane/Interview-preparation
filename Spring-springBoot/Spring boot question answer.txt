@@ -10,4 +10,22 @@ d. Support for Jakarta EE 10 with an EE 9 baseline: Jakarta EE 10 is the latest 
 e. Spring Framework 6: Spring Boot 3 is based on Spring Framework 6, so it includes all of the new features and improvements that were introduced in Spring Framework 6.
 
 
+--------------------------
 
+2. what are spring boot profiles?
+Answer:
+Spring Profiles provide a way to segregate parts of your application configuration and make it be available only in certain environments. Any @Component, @Configuration or @ConfigurationProperties can be marked with @Profile to limit when it is loaded, as shown in the following example:
+Sample Code:
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
+
+@Configuration(proxyBeanMethods = false)
+@Profile("production")
+public class ProductionConfiguration {
+	// ...
+}
+
+Summary
+Spring Boot Profiles are a powerful tool for managing environment-specific configurations.
+They promote flexibility and maintainability by allowing an application to adapt to different environments seamlessly.
+By following a few simple steps, developers can create and activate profiles to control an application’s behavior in various contexts.
