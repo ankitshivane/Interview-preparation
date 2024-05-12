@@ -25,6 +25,10 @@ public class ProductionConfiguration {
 	// ...
 }
 
+You can use a spring.profiles.active Environment property to specify which profiles are active. You can specify the property. For example, you could include it in your application.properties, as shown in the following example:
+Properties:
+spring.profiles.active=dev
+
 Summary
 Spring Boot Profiles are a powerful tool for managing environment-specific configurations.
 They promote flexibility and maintainability by allowing an application to adapt to different environments seamlessly.
