@@ -1,0 +1,13 @@
+1. what are the features of spring boot 3 release?
+answer:
+Spring Boot 3 is a major release of the Spring Boot framework, released in November 2022. It includes several new features, improvements and bug fixes:
+
+a. Java 17 baseline: Spring Boot 3 requires Java 17 or higher. This means you can take advantage of the latest features and performance improvements that Java 17 offers.
+b. Support for generating native images with GraalVM: GraalVM is a high-performance virtual machine that can be used to generate native images of your Spring Boot applications. This can
+significantly improve the performance of your applications, especially on startup.
+c. Improved observability with Micrometer and Micrometer Tracing: Micrometer is a library that provides a unified API for collecting metrics from your Spring Boot applications. Micrometer Tracing is a library that provides tracing support for your Spring Boot applications. These libraries make it easier to monitor and troubleshoot your applications.
+d. Support for Jakarta EE 10 with an EE 9 baseline: Jakarta EE 10 is the latest version of the Jakarta EE specification. Spring Boot 3 includes support for Jakarta EE 10, so you can now use Spring Boot to develop applications that are compliant with the Jakarta EE 10 specification.
+e. Spring Framework 6: Spring Boot 3 is based on Spring Framework 6, so it includes all of the new features and improvements that were introduced in Spring Framework 6.
+
+
+
