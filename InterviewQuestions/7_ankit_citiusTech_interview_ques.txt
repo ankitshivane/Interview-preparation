@@ -43,7 +43,7 @@ During your interview, you can highlight these major changes introduced in Sprin
 
 7. **Miscellaneous Changes and Deprecations:** Spring Boot 3 introduces various smaller changes and deprecations. Be sure to consult the Spring Boot documentation for a complete list. (Spring Boot 2 had its own set of features and deprecations)
 
-
+------------------------------------------------------------------------------------------------------------------------------------------------
 
 2. Content of your Dockerfile for dockerizing spring boot application?
 answer:
@@ -83,8 +83,21 @@ docker run -p 8080:8080 -e AWS_ACCESS_KEY_ID=your-access-key-id -e AWS_SECRET_AC
 
 info: When running the Docker container, make sure to pass the necessary environment variables (AWS credentials and region) to the container using the -e option in the docker run command.
 
+------------------------------------------------------------------------------------------------------------------------------------------------
 
+3. what is marker interface in Java?
+Anser:
+A marker interface in Java is an interface that doesn't have any methods or constants declared within it. Its sole purpose is to mark or tag a class to signify that the class implements or supports a particular behavior or capability.
 
-3. 
+Marker interfaces are used to indicate certain characteristics or capabilities of a class to the compiler or runtime environment. They act as metadata and can influence the behavior of the program or framework.
 
+Some common examples of marker interfaces in Java include: 
+A. java.io.Serializable  interface is a marker interface used to indicate that a class can be serialized, i.e., its objects can be converted into a byte stream for storage or transmission.
+B. Cloneable Interface: The java.lang.Cloneable interface is a marker interface used to indicate that a class supports cloning, i.e., creating a copy of its objects.
+------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------
 
