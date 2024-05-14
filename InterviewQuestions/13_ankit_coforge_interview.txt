@@ -1,0 +1,14 @@
+the interview with coforge for HSBC client happened on 13th May at 10 AM
+
+Coforge 
+
+1. What are solid principles 
+2. What is the difference between hashmap and concurrent hashmap 
+3. What is IOC and dependency injection 
+4. Whatvare the different stereotypes annotations in spring boot 
+5. What are the design pattern used in your project 
+6. What are the different features of Java 8
+7. What is dependency injection and what are the different types of it 
+8. What is association and composition In Java
+9. What is authentication and authorisation
+10. What is api gateway
