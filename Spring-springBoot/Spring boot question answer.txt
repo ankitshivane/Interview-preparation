@@ -70,7 +70,10 @@ https://www.tutorialspoint.com/Difference-between-ArrayList-and-CopyOnWriteArray
 
 ---------
 
-5.
+5. difference between hashmap and concurrent hashmap?
+answer:
+https://www.javatpoint.com/hashmap-vs-concurrenthashmap-in-java
+
 
 --------
 
