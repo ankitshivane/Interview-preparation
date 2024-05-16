@@ -64,7 +64,15 @@ separating the concerns of object creation and dependency management from the bu
 Reduced Boilerplate Code: By handling the creation and injection of dependencies, DI reduces the amount of boilerplate code required in the application, leading to cleaner and more concise code.
 
 ----------
+4. difference between arraylist and copyonaraylist?
+answer:
+https://www.tutorialspoint.com/Difference-between-ArrayList-and-CopyOnWriteArrayList-in-Java
 
+---------
+
+5.
+
+--------
 
 
 
