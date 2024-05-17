@@ -12,3 +12,32 @@ Coforge
 8. What is association and composition In Java
 9. What is authentication and authorisation
 10. What is api gateway
+
+Java 8 coding questions:
+1. from a given string find all cosecutive character
+Answer by my: wrong output it gave duplicate element not consecutive
+
+		List<Character> charList = str.chars().mapToObj(c -> (char) c).collect(Collectors.toList());
+		Map<Character, List<Character>> consecutiveChar = charList.stream().collect(Collectors.groupingBy((c) -> c));
+
+		consecutiveChar.forEach((k, v) -> {
+			System.out.println("Consecutive char:" + k);
+			System.out.println("List Size:" + v.size());
+			System.out.println("Values:" + v);
+		});
+
+2. from the same string object find a unique character or non repeating character
+Answer: Correct 
+
+		Map<Character, Long> collect = str.chars().mapToObj(c -> (char) c)
+				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+		collect.entrySet().stream().filter(e -> e.getValue() == 1).map(entry -> entry.getKey().toString())
+				.forEach(System.out::print);
+
+3. assume the
+answer
+List<Branch> ls;
+		List<String> topPerfBranches=ls.stream().sorted(Branch.comparingInt(Branch::getSales))
+		.reversed().limit(5).map(Branch::getBranches).collect(Collectors.toList());
+		 
