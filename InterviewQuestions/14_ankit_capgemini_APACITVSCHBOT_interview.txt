@@ -9,7 +9,7 @@ coding questions:
 2. 
 List<String> ls= { "Pradeep" , "Test" , "Abc" , "Pradeep" , "Test" , "Pradeep" }
 need to fetch elements with occurences - using java8
-
+Answer given by Me :
 Map<String,Long> groupedElements= ls.stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
 groupedElements.entrySet().stream().forEach(i->{
 System.out.println(i.getKey()+"+i.getValue());
@@ -20,7 +20,7 @@ what are the intermediate and terminal operations used in above program.
 2.
 List<Employee> employees
 fetch the names -whose age is grater than 40 --using java 8 or naylogic
-
+Answer given by Me :
 List<Employee>empagrgt=employees.stream().filter(i->i.getAge()>40).collect(Collectors.toList());
 
 3. what are the different annotations you have used in your project?
