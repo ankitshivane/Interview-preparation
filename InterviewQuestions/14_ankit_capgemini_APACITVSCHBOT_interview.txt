@@ -24,4 +24,4 @@ Answer given by Me :
 List<Employee>empagrgt=employees.stream().filter(i->i.getAge()>40).collect(Collectors.toList());
 
 3. what are the different annotations you have used in your project?
-
+4. what is the difference between functional interface and normal interface 
