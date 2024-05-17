@@ -1,0 +1,27 @@
+first round L1 Interview for another client in capgemini conducted by Ankita Srivastava at morning 9:15 AM on 17th May 2024.
+where the pkg range was 16 to 18 LPA asked.
+interviewer contact: 9517456711
+Anita from hiring third party consultancy:6201423480
+
+1. what is method reference in java 8?
+
+coding questions:
+2. 
+List<String> ls= { "Pradeep" , "Test" , "Abc" , "Pradeep" , "Test" , "Pradeep" }
+need to fetch elements with occurences - using java8
+
+Map<String,Long> groupedElements= ls.stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+groupedElements.entrySet().stream().forEach(i->{
+System.out.println(i.getKey()+"+i.getValue());
+});
+
+what are the intermediate and terminal operations used in above program.
+
+2.
+List<Employee> employees
+fetch the names -whose age is grater than 40 --using java 8 or naylogic
+
+List<Employee>empagrgt=employees.stream().filter(i->i.getAge()>40).collect(Collectors.toList());
+
+3. what are the different annotations you have used in your project?
+
