@@ -1,0 +1,32 @@
+attended first round of interview on 18th May 2024 at 10 AM, interviewer name kumar ramkrishnan
+discuss expected salary of 15 to 18 lpa
+
+coding question:
+1. print second highest number
+List<Integer> listOfInt=Arrays.asList(2,3);
+Integer secondMaxNumber=listOfInt.stream().sorted(comparator.naturalOrder()).skip(1).limit(1).get();
+
+2. print department wise salary 
+List<Employee> listOfEmp=new ...;
+
+Map<String,Double> salaryDeptWise=listOfEmp.stream().collect(
+Collectos.groupBy(Employee::getDepartment,Collectos.summingDouble(EMployee::getSalary));
+);
+
+3. print the numbers in reverse order 
+List<Integer> listOfInt=Arrays.asList(2,3);
+
+List<Integer> reveredInt=listOfInt.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+
+4. print the numbers in reverse order using java 8 streams but without using the reverseOrder() method as use in above approach
+unable to answer
+
+
+question
+1. explain me about yourself, technical skils you have, project you have worked on, role in the project
+2. how do you communicate using different microservices
+3. which annotation you use for microservices communication
+4. explain the process of creating a record in the database (how to create a REST API)
+5. what is the command for downloading the source code
+6. what are the disfferent aws services used in
+7. explain docker build command or flow of creating the docker imager
