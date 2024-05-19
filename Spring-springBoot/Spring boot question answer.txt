@@ -170,7 +170,9 @@ java -jar myapp.jar --myapp.name=MyNewAppName
 
 
 5. Using @PropertySource Annotation:
-You can load properties from an external properties file using @PropertySource.
+@PropertySource annotation in Spring is used to declare a set of properties files to be loaded into the Spring Environment. This allows you to externalize your configuration and keep your application configuration clean and organized.To be used in conjunction with @Configuration classes.
+which we can use in conjunction with @value, environment variables, @configurationProperties
+
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
