@@ -87,10 +87,12 @@ The @Value annotation is used to inject individual properties from application.p
 
 2. Using @ConfigurationProperties:
 The @ConfigurationProperties annotation is used to bind a group of properties to a Java bean.
+You can inject and use this bean throughout your application code just like any other spring bean.
 application.properties file
 myapp.name=My Spring Boot App
 myapp.port=8080
 myapp.enabled=true
+
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
@@ -106,7 +108,39 @@ public class MyAppProperties {
     // getters and setters
 }
 
-3. Using Environment:
+b. We can also use @ConfigurationProperties annotation on @Bean-annotated methods.
+lets say application.properties
+#Book
+book.bookTitle= New Book
+book.price= 150
+book.isbn = 3523634523f342
+example of class:
+
+book.class
+public class Book {
+ 
+    private String bookTitle;
+ 
+    private Double price;
+ 
+    private String isbn;
+ 
+    //getters and setters
+}
+
+mapping the configuration:
+
+@Configuration
+public class BeanConfigProperties {
+ 
+    @Bean
+    @ConfigurationProperties(prefix = "book")
+    public Book book()
+    {
+        return  new Book();
+    }
+}
+3.Using Environment:
 The Environment interface is used to programmatically access properties
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
