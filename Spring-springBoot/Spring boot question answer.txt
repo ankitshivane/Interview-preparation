@@ -76,7 +76,74 @@ https://www.javatpoint.com/hashmap-vs-concurrenthashmap-in-java
 
 
 --------
+6. different ways to inject external properties into spring boot application?
+ans:
+In Spring Boot, there are several ways to inject external properties into your application.
+
+1. Using @Value Annotation:
+The @Value annotation is used to inject individual properties from application.properties or application.yml directly into Spring beans.
+@Value("${myapp.name}")
+    private String appName;
+
+2. Using @ConfigurationProperties:
+The @ConfigurationProperties annotation is used to bind a group of properties to a Java bean.
+application.properties file
+myapp.name=My Spring Boot App
+myapp.port=8080
+myapp.enabled=true
+
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
+
+@Component
+@ConfigurationProperties(prefix = "myapp")
+public class MyAppProperties {
+
+    private String name;
+    private int port;
+    private boolean enabled;
+
+    // getters and setters
+}
+
+3. Using Environment:
+The Environment interface is used to programmatically access properties
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
+import org.springframework.stereotype.Component;
+
+@Component
+public class MyBean {
+
+    @Autowired
+    private Environment env;
+
+    public void printProperties() {
+        String appName = env.getProperty("myapp.name");
+        int port = Integer.parseInt(env.getProperty("myapp.port"));
+        boolean enabled = Boolean.parseBoolean(env.getProperty("myapp.enabled"));
+
+        System.out.println("Name: " + appName);
+        System.out.println("Port: " + port);
+        System.out.println("Enabled: " + enabled);
+    }
+}
 
 
+4. Using Command Line Arguments:
+Command line arguments can override properties defined in application.properties or application.yml.
+java -jar myapp.jar --myapp.name=MyNewAppName
 
 
+5. Using @PropertySource Annotation:
+You can load properties from an external properties file using @PropertySource.
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+
+@Configuration
+@PropertySource("classpath:myapp.properties")
+public class AppConfig {
+    // This class can be used to load external properties
+}
+
+------------------
