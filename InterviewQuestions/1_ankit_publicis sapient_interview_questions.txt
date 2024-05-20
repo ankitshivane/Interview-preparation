@@ -1,3 +1,38 @@
+**Publicis Sapient Interview Questions:**
+
+**Interview:**
+
+1. **String is thread safe?**
+   
+2. **If I have all the classes in my project as thread safe then what will be the advantages and disadvantages?**
+
+3. **What is encapsulation?**
+
+4. **What is immutability?**
+
+5. **What is a functional interface in Java 8?**
+
+6. **What are the advantages of Spring Boot over Spring?**
+
+7. **What is the difference between JPA, Spring Data JPA, and Hibernate?**
+
+8. **How to rollback a query result?**
+
+9. **What is SOLID design principle?**
+
+10. **What is the difference between inheritance and cohesion?**
+
+11. **What does the verify method do?**
+
+**Coding:**
+
+1. **Find the second highest element in an integer array. The constraint is to find this in linear time.**
+
+2. **Find the number of occurrences of elements present in the given string.**
+
+ 
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 **Publicis Sapient Interview Question Answers:**
 
