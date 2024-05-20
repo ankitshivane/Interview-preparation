@@ -1,0 +1,156 @@
+
+
+**EPAM Interview Questions:**
+
+1. **What is saga pattern in microservices?**
+
+2. **What is singleton class in java?**
+
+3. **How to create a singleton class?**
+
+4. **Are this singleton class threadsafe?**
+
+5. **If they are not thread safe then how you create a singleton class using double check locking?**
+
+6. **Can we override main method in java?**
+
+7. **Why shouldn't we serialize data into a text file?**
+
+8. **What if your serializable class contains a member that is not serializable then how should you fix it?**
+
+9. **What is Transient in java?**
+
+10. **How does garbage collection work In java?**
+
+11. **So do finalized keyword has any role in garbage collection?**
+
+12. **What algorithm JVM used for garbage collection?**
+
+13. **How does memory leaks occur in java even if we have garbage collection?**
+
+14. **What is Difference between young generation and old generation memory spaces?**
+
+15. **Suppose you observed that a spring boot application performance is slow in production then compare to development environment then what steps you will take to address this issue?**
+
+16. **How do you integrate relational database like MySQL with a spring boot application?**
+
+17. **How would you modify an existing spring boot application to convert it into serverless architecture?**
+
+18. **How does spring boot application make the decision that which server to use?**
+
+19. **How would you handle exceptions in a spring boot REST application?**
+
+20. **How can we handle multiple beans of the same type?**
+
+21. **In the Spring Framework, what is aspect-oriented programming?**
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+**EPAM Interview Question Answers:**
+
+1. **What is saga pattern in microservices?**
+   - The saga pattern is a design pattern used in distributed systems, particularly in microservices architectures, to manage long-lived transactions that span multiple services. Instead of using a traditional ACID transaction across all services, the saga pattern breaks down the transaction into a series of smaller, independent transactions (or steps) that can be individually executed and compensated if necessary.
+
+2. **What is singleton class in Java?**
+   - In Java, a singleton class is a class that can have only one instance (object) created at a time. It ensures that there is a single point of access to the instance throughout the application's lifecycle.
+
+3. **How to create a singleton class?**
+   - To create a singleton class in Java, you can use the following approach:
+     ```java
+     public class Singleton {
+         private static Singleton instance;
+
+         private Singleton() {}
+
+         public static Singleton getInstance() {
+             if (instance == null) {
+                 instance = new Singleton();
+             }
+             return instance;
+         }
+     }
+     ```
+
+4. **Are this singleton class threadsafe?**
+   - No, the above singleton implementation is not thread-safe. If multiple threads access the `getInstance()` method simultaneously, it can result in multiple instances being created. 
+
+5. **If they are not thread-safe then how you create a singleton class using double check locking?**
+   - To make the singleton class thread-safe, you can use double-checked locking as follows:
+     ```java
+     public class Singleton {
+         private static volatile Singleton instance;
+
+         private Singleton() {}
+
+         public static Singleton getInstance() {
+             if (instance == null) {
+                 synchronized (Singleton.class) {
+                     if (instance == null) {
+                         instance = new Singleton();
+                     }
+                 }
+             }
+             return instance;
+         }
+     }
+     ```
+
+6. **Can we override main method in Java?**
+   - Yes, we can override the `main` method in Java, but it won't have any special significance as it does for the entry point of the program. The method signature must match the original `main` method, but it won't be executed automatically by the JVM.
+
+7. **Why shouldn't we serialize data into a text file?**
+   - Serializing data into a text file can lead to security vulnerabilities and portability issues. Text files are not inherently secure, and sensitive data may be exposed if not properly encrypted. Additionally, text files may not preserve data types and structures accurately during serialization and deserialization.
+
+8. **What if your serializable class contains a member that is not serializable then how should you fix it?**
+   - If a serializable class contains a member that is not serializable, you can mark that member as `transient` to exclude it from serialization. Alternatively, you can implement custom serialization methods (`writeObject()` and `readObject()`) to handle serialization and deserialization of non-serializable members manually.
+
+9. **What is Transient in Java?**
+   - In Java, the `transient` keyword is used to indicate that a member variable should not be serialized when the object is serialized. Transient variables are not part of the persistent state of an object and are excluded from the serialization process.
+
+10. **How does garbage collection work in Java?**
+    - Garbage collection in Java is the process of automatically reclaiming memory occupied by objects that are no longer referenced or in use by the application. The JVM periodically identifies and removes unreferenced objects from memory to free up space for new objects.
+
+11. **So do finalized keyword has any role in garbage collection?**
+    - Yes, the `finalize()` method in Java allows an object to perform cleanup operations before it is garbage collected. However, relying on `finalize()` for resource cleanup is discouraged because the timing of when `finalize()` is called is unpredictable, and it may not be called at all in some cases.
+
+12. **What algorithm does the JVM use for garbage collection?**
+    - The JVM uses various garbage collection algorithms, including the Mark-Sweep algorithm, the Mark-Sweep-Compact algorithm, the Generational Garbage Collection algorithm (which includes Young Generation and Old Generation collections), and the G1 (Garbage-First) collector. The choice of algorithm depends on factors such as heap size, application behavior, and JVM configuration.
+
+13. **How does memory leaks occur in Java even if we have garbage collection?**
+    - Memory leaks in Java can occur when objects are unintentionally kept in memory due to lingering references, preventing them from being garbage collected. Common causes of memory leaks include static references, unclosed resources, and memory leaks in native code or third-party libraries.
+
+14. **What is the Difference between young generation and old generation memory spaces?**
+    - In Java garbage collection, the heap memory is divided into two main regions: the Young Generation and the Old Generation. The Young Generation is where new objects are allocated, and it consists of two spaces: Eden space and Survivor space. The Old Generation, also known as the Tenured Generation, is where long-lived objects are stored after surviving multiple garbage collection cycles in the Young Generation.
+
+15. **Suppose you observed that a spring boot application performance is slow in production compared to the development environment. What steps will you take to address this issue?**
+    - Possible steps to address slow performance in a Spring Boot application include:
+      - Analyzing performance metrics and identifying bottlenecks.
+      - Optimizing database queries and indexing.
+      - Scaling resources such as CPU, memory, and disk storage.
+      - Caching frequently accessed data.
+      - Profiling the application to identify hotspots and optimize critical code paths.
+      - Using monitoring and logging tools to track performance issues in real-time.
+
+16. **How do you integrate a relational database like MySQL with a Spring Boot application?**
+    - To integrate MySQL with a Spring Boot application, you can use Spring Data JPA along with Hibernate as the ORM (Object-Relational Mapping) framework. Configure the data source properties in the `application.properties` file, define JPA entities representing database tables, and use Spring Data repositories to perform database operations.
+
+17. **How would you modify an existing Spring Boot application to convert it into a serverless architecture?**
+    - Converting a Spring Boot application to a serverless architecture involves breaking down the monolithic application into smaller, stateless functions that can be deployed and scaled independently. This can be achieved by refactoring existing functionality into serverless functions using platforms like AWS Lambda or Azure Functions, and exposing them via APIs using API Gateway or other serverless frameworks.
+
+18. **How does a Spring Boot application make the decision on which server to use?**
+    - Spring Boot applications use auto-configuration to automatically configure embedded servers based on the dependencies present in the classpath. The embedded server is determined based on the dependencies included in the `pom.xml` or `build.gradle` file, such as Tomcat, Jetty, or Undertow.
+
+19. **How would you handle exceptions in a Spring Boot REST application?**
+    - In a Spring Boot REST application, exceptions can be handled using `@ExceptionHandler` methods in controller classes to handle specific exceptions and return appropriate error responses. Additionally, you can use `@ControllerAdvice` classes to provide global exception handling across multiple controllers.
+
+20. **How can we handle multiple beans
+
+ of the same type in Spring Framework?**
+    - In Spring Framework, you can handle multiple beans of the same type by using `@Qualifier` annotation to specify the bean to be injected, or by using `@Primary` annotation to indicate the primary bean to be injected by default.
+
+21. **In the Spring Framework, what is aspect-oriented programming (AOP)?**
+    - Aspect-oriented programming (AOP) is a programming paradigm that allows developers to modularize cross-cutting concerns (such as logging, security, and transaction management) that cut across multiple components of an application. In Spring Framework, AOP is implemented using aspects, pointcuts, and advice to provide declarative, non-invasive ways of applying cross-cutting concerns to the application.
+
+---
