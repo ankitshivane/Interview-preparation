@@ -1,0 +1,34 @@
+Ltimindtree interview at 12:15
+Interviewer Priyanka ghore 
+Hr : kashish Singh and Ritu shivhare
+third party: pallavi
+
+1. What is default and static method and it's purpose 
+2. How do you handle exception in spring boot application 
+3. I'm controller advice and exception handler annotations which use is classlevel and method level
+4. Let's say we have to fetch the employee by id how to do that in spring boot give me application architecture also
+5. How to configure two different database in one spring boot application 
+6. What are the default functional interface in Java
+7. What is the return type predicte functional interface method
+8. What is hashmap explain about its thread safety 
+9. Difference between linkedlist and arrlist
+10. Which one is best for which case Al and LL
+10. What is concurrent hashmap 
+11. Difference between fail safe and fail fast iterator
+12. Explain the hierarchy of collection interface 
+13. What is immutable class and how to create one give me one example 
+14. Coding questions: give the employee object whose having 2nd highest salary from list of employees using Java 8
+15. Why strings are immutable in Java 
+16. Difference between string, stringbuffer and string builder
+17. How to write test cases for private method in Junit 
+18. Which all design pattern you have used in microservices
+19. Explain circuit breaker pattern and one is its implementation (resilient or hystrix)
+20. How authentication and authorisation works in project
+21. What is zookeeper in kafka
+22. Difference between treeset and hashset why treeset maintain order and hashset not
+23. Internal working of hashmap
+24. Explain me @qualifiet and @primary annotations
+25. Difference between comparable and comparator
+26. What is serialisation in Java
+27. What is deamon thread 
+28. What is deadlock situation

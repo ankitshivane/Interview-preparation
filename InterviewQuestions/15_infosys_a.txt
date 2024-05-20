@@ -1,0 +1,20 @@
+Infosys interview happened at 3:30 
+Interviewer: puneet
+email:ankitshivane
+1. Why string are immutable in Java
+2. How will you create a mutable version of the string 
+3. Different methods inside the string class
+4. Difference between the .concat vs .join method when to use 
+5. What are the steps you will take to connect spring boot application to database let's say oracle db or postgresql db 
+6. How you are handling exception in your project 
+7. How do you maintain quality of your code in project
+8. How hashset store unique objects internally 
+9. Can we add collection as a key in hashmap 
+10. What if we try to store a arraylist as key and string as value and added 2 values inside it then does it allowed if yes what will be the size of the hashmap and if no why?
+11. How do services in your application communicate with each other 
+12. Does string object in Java are immutable if yes why if no why
+13. What is if method overloading and overriding 
+14. Can we override main method in java
+15. How do you do the deployment of the spring boot application for your project? Which tools and technologies you used ? Who writes scripts ?
+16. Give me scenario where ClassNotfound and Noclassdefound exception will come
+17. Difference between @component vs @service annotation

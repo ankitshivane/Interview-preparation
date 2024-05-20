@@ -1,0 +1,18 @@
+Ltimindtree Poonam rathor HR interview happened at 11:15 am on 18th may
+Interviewer name: nitu patil 
+Email:ankitshivane.as@gmail.com
+1. Why we have default and static method in Java 8
+2. What is the difference between interface and abstract class
+3. Why we should use interface in Java 
+4. What is stream api
+5. What are the different intermediate operation and termination operation in streams
+6. What is difference between hashmap and concurrent hashmap 
+7. Let's say if we create a threadsafe version of hashmap using collections.synchronizedMap then what is the difference between that hashmap and concurrent hashmap 
+8. What are the ways to do microservice communication 
+9. What is SOLD design principles 
+10. What are the different annotations used in spring boot application list them
+11. How to connect spring boot application to database 
+12. What is spring framework what are its features and advantages 
+13. What Is meaning of exception and how you handle exception 
+14. Difference between throw and throws 
+15. Coding questions: for a given string find the frequency of each character in string using Java 8 streams
