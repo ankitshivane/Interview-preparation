@@ -16,3 +16,37 @@ Email:ankitshivane.as@gmail.com
 13. What Is meaning of exception and how you handle exception 
 14. Difference between throw and throws 
 15. Coding questions: for a given string find the frequency of each character in string using Java 8 streams
+
+first round selected 
+2nd round at Ltimindtree for account level hiring of banking domain 
+Hr- Poonam rathore 
+Interviewer - bipin
+Email - ankitshivane.as@gmail.com 
+Date and time: 21 May 1 pm to 1:40 pm 
+1. What is qualifier annotations 
+2. How to connect spring boot application to db
+3. How do you call api of another microservice what are the steps you will took
+4. How to create a microservice and create a api in it what are the steps
+5. What is static keyword
+6. What is method reference 
+7. What are the different predefined functional interface in Java 8 
+8. Tell me what is predicate and function interview in Java what are the methods inside it and where we use
+9. If we have lambda expression then where we can use method reference and how
+10. What is optional in Java 
+11. What is functional interface 
+12. How to create a functional interface 
+13. What are the different stereotypes annotations in spring boot list them
+14. What is dependency injection 
+15. What are the different types of dependency injection
+16. Guess the output of below program:
+try{
+return 1;}
+Catch(Exception e){
+return 2;
+}
+finally {
+return {
+return 3;
+}
+As per me ans: 3
+17. There is employee table having department Id as foreign key so write a sql query to fetch list of employees to fetch the employee having HR department
