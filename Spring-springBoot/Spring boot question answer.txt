@@ -183,3 +183,70 @@ public class AppConfig {
 }
 
 ------------------
+7. different ways to do external properties configuration in spring boot?
+Answer:
+
+In a Spring Boot application, external properties can be configured in several ways to customize the application's behavior without changing the source code. Here are some common approaches:
+
+1. **Application Properties/YAML Files**:
+   - `application.properties` or `application.yml` in the `src/main/resources` directory is the default location for external configurations.
+   - You can also use profile-specific properties, like `application-dev.properties` or `application-prod.yml`, which can be activated based on the profile.
+
+   ```properties
+   # application.properties
+   server.port=8080
+   spring.datasource.url=jdbc:mysql://localhost:3306/mydb
+   ```
+
+   ```yaml
+   # application.yml
+   server:
+     port: 8080
+   spring:
+     datasource:
+       url: jdbc:mysql://localhost:3306/mydb
+   ```
+
+2. **Command Line Arguments**:
+   - Properties can be passed as command line arguments when starting the application.
+
+   ```sh
+   java -jar myapp.jar --server.port=8080 --spring.datasource.url=jdbc:mysql://localhost:3306/mydb
+   ```
+
+3. **Environment Variables**:
+   - You can set environment variables that Spring Boot will pick up.
+
+   ```sh
+   export SERVER_PORT=8080
+   export SPRING_DATASOURCE_URL=jdbc:mysql://localhost:3306/mydb
+   ```
+
+4. **Java System Properties**:
+   - Properties can be set as JVM system properties.
+
+   ```sh
+   java -Dserver.port=8080 -Dspring.datasource.url=jdbc:mysql://localhost:3306/mydb -jar myapp.jar
+   ```
+
+7. **Profiles**:
+   - Use profiles to separate configurations for different environments, such as development, testing, and production.
+
+   ```properties
+   # application.properties
+   spring.profiles.active=dev
+
+   # application-dev.properties
+   server.port=8081
+
+   # application-prod.properties
+   server.port=8082
+   ```
+
+---------------------------------
+
+
+
+
+
+
