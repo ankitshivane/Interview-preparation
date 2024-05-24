@@ -30,3 +30,27 @@ Coding Questions on Java Streams:
 1. convert an employee list to Set using java Streams
 2. from a list of Employee fetch all employee having Location as Mumbai
 3. sort an employee list by employee id
+
+
+-------------------
+
+Second round L2 with Tech Mahindra at 18th May 6PM and interviewer is Krishna
+email used: ankitshivane.as
+HR: Deepa
+coding question
+var a=[1,2,35,8] 
+var b =[6,3,8,1]
+please merge both and remove duplicate
+
+List<Integer> mergedValues=
+IntStream.concat(Arrays.stream(a),Arrays.stream(b)).distinct().collect(Collectors.toList());
+
+----------
+
+1. how authentication and authorization of the api is working between multiple microservies
+2. how you have used redis in application
+3. how code quality is maintained in the project (ans:sonarqube)
+4. lets say we have two containers how one microservices is talking to another microservice ?
+5. how you are creating a containers ? explain docker build and docker run
+6. what is @configurationProperties annotation does?
+7. explain how you have secured your application what are the different ways your have used?
