@@ -1,0 +1,74 @@
+Interview happened at 24 May at 12:00 PM and ended on 12:45 PM
+result: selected 2nd round will be client round
+Interviewer:Roopa
+HR:Deepali (9769473315)
+as per interviewer client is looking for below thing needs to brushup on this skills to get selected:
+1. Spring Boot
+Java
+multi threading excel
+sql rdbms
+
+list of different annotations in sprng boot
+difference between wait, yeild and sleep
+does hashmap in java is thread safe ?
+how to create a thread safe version of hashmap
+what are the different features of Java8?
+how two microservices communicate with each other?
+how to create a threads in java? what are the ways?
+can we reverse a string in log n complexity?
+Coding Questions all using java 8 streams:
+1. from a list of string find the longest string
+2. lets say we have two arrays so I want to merge those arrays into one and get a sorted array from them
+3. from a given string get a count of each character in string 
+
+SQL:
+1. write a SQL Query to get 2nd highest salary of the employee?
+//		select * from Employee where salary<(select max(salary) from Employee;) limit 1;
+
+2. write a SQL query to get max salary department wise
+//		select max(salary),deptId from Employee group by deptId;
+
+3. wirte a sql query to get all unique empployess or how will you remove duplicate employee?
+//		select * from Employee where emp in (select distinct empid from Employee);
+
+
+Answer:
+
+package com.example.demo;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
+
+public class TestCls {
+
+	public static void main(String[] args) {
+// Answer for question 1
+		List<String> fruits = Arrays.asList("mango", "apple", "banana");
+		Optional<String> max = fruits.stream().max((s1, s2) -> Integer.compare(s1.length(), s2.length()));
+
+//		max.ifPresent(i -> System.out.println("Longest str:" + i));
+
+// Answer for question 2
+		int[] arr1 = { 1, 2, 3, 4, 5 };
+		int[] arr2 = { 6, 7 };
+		int[] result = IntStream.concat(Arrays.stream(arr1), Arrays.stream(arr2)).sorted().toArray();
+//		for (int num : result) {
+//			System.out.println(num);
+//		}
+
+// Answer for question 3
+		String str = "aaaccbbb";
+		Map<Character, Long> group = str.chars().mapToObj(c->(char)c).collect(Collectors.groupingBy(i->i, Collectors.counting()));
+		group.entrySet().stream().forEach(i->{
+			System.out.println("Char:"+i.getKey()+", Value:"+i.getValue());
+		});
+		
+	}
+
+}
