@@ -1,0 +1,27 @@
+Capgemini L1 first round interview. HR: Dhanu
+Interviewer: Vishal
+Happened at 23 may 11 am
+Email: ankitshivane.as
+1. What is functional interface 
+2. How to create a you own custom functional interface 
+3. What if we add multiple methods inside functional interface annotated with @FunctionalInterface annotations 
+4. What are the different predefined functional interface in Java
+5. What is stream api 
+6. What is meaning of intermediate operation 
+7. What is concurrent modification exception 
+8. How to prevent concurrent modification exception 
+9. What are the different annotations used for api creation 
+10. Difference between put and patch 
+11. How two microservice communicate 
+12. How to configure kafka topic in Java 
+13. What is topic 
+14. Can we view the message inside topic
+15. What is circuit breaker pattern 
+16. How to implement a circuit breaker pattern in spring boot application 
+17. What is secret manager and how you have used in your project 
+18. How you are doing a local testing if you are using secret manager
+19. List of AWS services you have used in project
+20. What is enum in java
+21. Difference between pathvariable vs requestparameters
+22. Which command use to see docker logs 
+23. How to view first 10 and last 500 lines of the log file
