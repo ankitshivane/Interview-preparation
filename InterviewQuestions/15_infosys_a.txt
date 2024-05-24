@@ -18,3 +18,17 @@ email:ankitshivane
 15. How do you do the deployment of the spring boot application for your project? Which tools and technologies you used ? Who writes scripts ?
 16. Give me scenario where ClassNotfound and Noclassdefound exception will come
 17. Difference between @component vs @service annotation
+
+--------------------
+
+Infosys 22nd may 2cond round happened at 6:15 pm waiting for response of 2nd round
+Email: ankitshivane.as
+1. What i the current team size ( don't you think 15 to 16 members is a big team size for agile)
+2. How do you deploy your application? How do you containerized the application 
+3. Have you faced any production issues? How did you resolve them
+4. How you decide a story points for a user story to be developed in the iteration 
+5. If you get a chance, how will you decide a story point
+6. What is retrospective call and how agile related calls you have jn the project 
+7. How do you work with Jr team members how do you groom them 
+8. Why are you looking for a job change
+
