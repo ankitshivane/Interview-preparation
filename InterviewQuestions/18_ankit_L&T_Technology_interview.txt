@@ -1,0 +1,36 @@
+Interview at l&t technology on 28-05-2024 at 2:30 
+
+interviewer: Nurul
+HR or coordinator: chittibabu
+email: ankitshivane.as
+1. What is the difference between spring and spring boot 
+2. Is java object oriented programming if yes how ?
+3. Is java 100% OOP language 
+4. Can we create a object of a abstract class how ?
+5. What is lambda expression and how you have used in your project 
+6. What is SOLID principles and how does it benifits to us
+7. How you have implemented Apache Kafka in your project 
+8. What is transaction api in kafka 
+9. What is MongoDB
+10. What is dependency injection principles 
+11. How does spring boot perform dependency injection 
+12. Can we use non static field from static field ?
+13. What is mockito in junit testing
+14. Coding question: Two sum ( from leetcode) from given an integer array return any 2 index which sums to the target (answered correctly)
+
+Code for question 14.
+public class Main
+{
+	public static void main(String[] args) {
+		int[] input={1,6,2,7,6};
+		int target=7;
+		for(int i=0;i<input.length-1;i++){
+		    for(int j=i+1;j<input.length;j++){
+		        if(target==input[i]+input[j]){
+		            System.out.print("output:"+i+"-"+j);
+		            break;
+		        }
+		    }
+		}
+	}
+}

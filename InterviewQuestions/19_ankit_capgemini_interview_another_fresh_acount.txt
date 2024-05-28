@@ -1,0 +1,22 @@
+Interviewer:Nitin
+ meshram happened at 3 PM 24 may status : rejected 
+Recruiter: Raj 
+1. What is meaning of Deep cloning do we cloned the objects or do we clone the reference of it
+2. How to create a immutable class in java
+3. Can we create a constructor with final keyword 
+4. What is meaning of private constructor 
+5. In calendar class we have a static method returning the object of the Calendar class but the calendar class in abstract so from where that object is coming as everyone says java can not instantiate abstract class
+6. Let's say we have List of A class in order to work with .contains, Max, min etc operation what changes we need to do in a A class
+7. What is the difference between spring data rest, data jpa, spring data 
+8. Difference between hibernate and jpa ? Which come first ?
+9. Which one is proprietary hibernate or jpa
+10. Let's say I have a library I want to hire you as a developer and I want to create a interface and tell me the overall operations or rest endpoints you are going to do on that how will you create a interface for that 
+11. What is L in solid design principles 
+12. What are the different design patterns in core Java you used
+13. How will you implement a many to manag relationship in SQL between two table let's say Employee and category table
+14. How to write a group by let's say give me count of employee based on category and sort them with count of employee 
+15. What is meaning of encoding in rest api why it is needed? What is the primary purpose of that not security 
+16. What is point cut and how to develop it 
+17. Can we create multiple rest endpoints having different different http method types
+18. What is advice in @controllerAdvice annotation why it is advice and not command
+19. Can we reverse a string in java with log n complexity
