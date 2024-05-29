@@ -116,6 +116,17 @@ public class ConcurrentHashMapExample {
 }
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
+3. what is classpath in java? how to set in spring boot application? 
+Anawer:
+In Java, the classpath is a parameter—set either on the command-line or via an environment variable—that tells the Java Virtual Machine (JVM) and Java compiler (javac) where to find the user-defined classes and packages. Essentially, it is a list of directories, JAR files, and ZIP files that the JVM searches for the classes needed to run a Java program.
+
+Command-Line Argument: Using the -cp or -classpath option when running the java or javac commands.
+cmd:
+java -cp mylib.jar:classes:. com.example.MainClass
+
+In Spring Boot applications, setting the classpath is typically handled by the build tools (such as Maven or Gradle) and the Spring Boot framework itself. This greatly simplifies the development process, allowing you to focus on writing code rather than managing the classpath manually.
+
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------------------
