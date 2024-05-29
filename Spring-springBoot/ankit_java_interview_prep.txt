@@ -128,6 +128,17 @@ In Spring Boot applications, setting the classpath is typically handled by the b
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
+4. what are rhe different changes happened in collection framework as part of java 8?
+Answer:
+Java 8 introduced the following major changes to the collections framework:
+
+Streams API: For functional-style operations on collections.
+Default Methods: In interfaces to add new functionality without breaking existing code.
+New Collection Methods: Such as forEach, removeIf, stream, and parallelStream.
+Enhanced Map Interface: With methods like forEach, getOrDefault, putIfAbsent, compute, and merge.
+Optional Class: To handle null values more gracefully.
+Collectors Utility Class: For accumulating elements of a stream into collections or other results.
+These enhancements made it easier to perform complex data manipulations, handle nulls safely, and process data in a more functional and parallelizable way.
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------------------
