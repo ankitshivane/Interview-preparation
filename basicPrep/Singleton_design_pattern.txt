@@ -1,0 +1,229 @@
+let's walk through an end-to-end implementation of a Singleton Cache Manager in the context of your MOH Centralized Appointment System project, ensuring it adheres to Singleton design pattern principles, including thread safety and prevention of cloning:
+
+1. **Singleton Cache Manager Interface:**
+   - Define a Singleton Cache Manager interface with methods to manage caching strategies, data caching, expiration policies, and cache eviction strategies.
+
+   ```java
+   public interface CacheManager {
+       void cacheData(String key, Object data);
+       Object getData(String key);
+       void evictData(String key);
+       void clearCache();
+       // Other cache management methods...
+   }
+   ```
+
+2. **Singleton Cache Manager Implementation:**
+   - Implement a Singleton Cache Manager class that implements the CacheManager interface using the Singleton pattern.
+   - Ensure the Singleton instance is created lazily and thread-safe.
+
+   ```java
+   public class SingletonCacheManager implements CacheManager {
+       private static volatile SingletonCacheManager instance;
+       private Map<String, Object> cache;
+
+       private SingletonCacheManager() {
+           this.cache = new HashMap<>();
+       }
+
+       public static SingletonCacheManager getInstance() {
+           if (instance == null) {
+               synchronized (SingletonCacheManager.class) {
+                   if (instance == null) {
+                       instance = new SingletonCacheManager();
+                   }
+               }
+           }
+           return instance;
+       }
+
+       @Override
+       public void cacheData(String key, Object data) {
+           cache.put(key, data);
+       }
+
+       @Override
+       public Object getData(String key) {
+           return cache.get(key);
+       }
+
+       @Override
+       public void evictData(String key) {
+           cache.remove(key);
+       }
+
+       @Override
+       public void clearCache() {
+           cache.clear();
+       }
+
+       // Other cache management methods implementation...
+   }
+   ```
+
+3. **Singleton Pattern Considerations:**
+   - **Lazy Initialization:** The Singleton instance is created lazily to avoid unnecessary instantiation until the getInstance() method is called.
+   - **Thread Safety:** The getInstance() method uses double-checked locking and volatile keyword to ensure thread-safe creation of the Singleton instance.
+   - **Prevent Cloning:** To prevent cloning, override the clone() method in the SingletonCacheManager class and throw a CloneNotSupportedException.
+
+   ```java
+   @Override
+   protected Object clone() throws CloneNotSupportedException {
+       throw new CloneNotSupportedException("Singleton instance cannot be cloned");
+   }
+   ```
+
+4. **Usage in the Application:**
+   - In your application code, use the Singleton Cache Manager to manage caching strategies and data caching throughout the system.
+   - Utilize methods like cacheData(), getData(), evictData(), and clearCache() as needed based on caching requirements.
+
+   ```java
+   public class CacheClient {
+       public static void main(String[] args) {
+           CacheManager cacheManager = SingletonCacheManager.getInstance();
+
+           // Cache data
+           cacheManager.cacheData("key1", "value1");
+
+           // Retrieve data
+           Object cachedData = cacheManager.getData("key1");
+
+           // Evict data
+           cacheManager.evictData("key1");
+
+           // Clear cache
+           cacheManager.clearCache();
+       }
+   }
+   ```
+
+This implementation ensures that the Singleton Cache Manager is thread-safe, prevents cloning, and provides centralized control over caching configurations, expiration policies, and cache eviction strategies, enhancing application performance within your MOH Centralized Appointment System project.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+To extend the Singleton Cache Manager to support multiple cache names, keys, TTL configurations, and integrate it into your Spring Boot application using caching annotations, you can enhance the existing implementation with these features. Let's break down the steps:
+
+1. **Enhance Cache Manager Interface:**
+   Modify the CacheManager interface to support multiple cache names, keys, and TTL configurations for caching annotations.
+
+   ```java
+   public interface CacheManager {
+       void cacheData(String cacheName, String key, Object data, long ttlInSeconds);
+       Object getData(String cacheName, String key);
+       void evictData(String cacheName, String key);
+       void clearCache(String cacheName);
+       // Other cache management methods...
+   }
+   ```
+
+2. **Modify Singleton Cache Manager Implementation:**
+   Update the SingletonCacheManager class to handle multiple cache names, keys, and TTL configurations based on caching annotations.
+
+   ```java
+   public class SingletonCacheManager implements CacheManager {
+       private static volatile SingletonCacheManager instance;
+       private Map<String, Map<String, CacheObject>> caches;
+
+       private SingletonCacheManager() {
+           this.caches = new HashMap<>();
+       }
+
+       public static SingletonCacheManager getInstance() {
+           if (instance == null) {
+               synchronized (SingletonCacheManager.class) {
+                   if (instance == null) {
+                       instance = new SingletonCacheManager();
+                   }
+               }
+           }
+           return instance;
+       }
+
+       @Override
+       public void cacheData(String cacheName, String key, Object data, long ttlInSeconds) {
+           CacheObject cacheObject = new CacheObject(data, System.currentTimeMillis() + (ttlInSeconds * 1000));
+           caches.computeIfAbsent(cacheName, k -> new HashMap<>()).put(key, cacheObject);
+       }
+
+       @Override
+       public Object getData(String cacheName, String key) {
+           CacheObject cacheObject = caches.getOrDefault(cacheName, Collections.emptyMap()).get(key);
+           if (cacheObject != null && cacheObject.getExpiryTime() > System.currentTimeMillis()) {
+               return cacheObject.getData();
+           } else {
+               evictData(cacheName, key); // Remove expired data
+               return null;
+           }
+       }
+
+       @Override
+       public void evictData(String cacheName, String key) {
+           Map<String, CacheObject> cache = caches.get(cacheName);
+           if (cache != null) {
+               cache.remove(key);
+           }
+       }
+
+       @Override
+       public void clearCache(String cacheName) {
+           caches.remove(cacheName);
+       }
+
+       // Other cache management methods implementation...
+   }
+   ```
+
+3. **Cache Object Class:**
+   Define a CacheObject class to encapsulate cached data and its expiration time.
+
+   ```java
+   public class CacheObject {
+       private Object data;
+       private long expiryTime;
+
+       public CacheObject(Object data, long expiryTime) {
+           this.data = data;
+           this.expiryTime = expiryTime;
+       }
+
+       public Object getData() {
+           return data;
+       }
+
+       public long getExpiryTime() {
+           return expiryTime;
+       }
+   }
+   ```
+
+4. **Spring Boot Integration with Caching Annotations:**
+   Configure Spring Boot to use your Singleton Cache Manager implementation with caching annotations like `@Cacheable`, `@CachePut`, and `@CacheEvict`.
+
+   ```java
+   @Service
+   public class AppointmentService {
+       private final CacheManager cacheManager = SingletonCacheManager.getInstance();
+
+       @Cacheable(value = "appointments", key = "#appointmentId")
+       public Appointment getAppointment(String appointmentId) {
+           // Logic to fetch appointment from database
+           return appointment;
+       }
+
+       @CachePut(value = "appointments", key = "#appointmentId")
+       public Appointment updateAppointment(String appointmentId, Appointment updatedAppointment) {
+           // Logic to update appointment in database
+           return updatedAppointment;
+       }
+
+       @CacheEvict(value = "appointments", key = "#appointmentId")
+       public void deleteAppointment(String appointmentId) {
+           // Logic to delete appointment from database
+       }
+   }
+   ```
+
+In this enhanced implementation, the Singleton Cache Manager supports multiple cache names, keys, TTL configurations, and integrates seamlessly with Spring Boot's caching annotations (`@Cacheable`, `@CachePut`, `@CacheEvict`). This setup allows you to easily manage caching strategies, expiration policies, and cache eviction strategies within your Spring Boot application.
