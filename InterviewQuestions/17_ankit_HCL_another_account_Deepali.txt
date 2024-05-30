@@ -72,3 +72,25 @@ public class TestCls {
 	}
 
 }
+
+
+----------------------------------------
+2nd round done with Nomura client 
+1st Client interview happen at 2:30 pm on 29 may 2024 
+By interviewer: niranjan Kulkarni 
+Email use: ankitshivane.as@
+
+1. What is rate limiter 
+2. What is the changes in collection package happened in java 8
+3. What is concurrent hashmap and what are the advantages of it than the current hashmap 
+4. How multi threading is utilised in the current project 
+5. How you fetch data from completablefuture
+6. If in the main method there is a piece of block which throw an exception but now covered under try catch them what will happen 
+7. Coding questions: write a program to read a file present in your D drive and then print the number which is greater than 5 the file contains entry of Id and fruits names seperated with space.
+8. What are factory method in spring boot 
+9. What is the root cause of ClassDefNotFound exception or class not found exception why it occurs in spring boot and how to fix them 
+10. Let's say if I have to store names of the locations then which collection you will use 
+11. How Hashset stores the elements inside it means how duplicates are not allowed in hashset and why randomness gets introduced
+12. What is meaning of indexes
+13. What are starter dependencies in spring boot
+
