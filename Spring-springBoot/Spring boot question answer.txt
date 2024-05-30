@@ -396,6 +396,83 @@ Rate limiting is an essential technique in modern web applications and microserv
 ------------------------
 ------------------------
 
-9. 
+9. How to handle 1000 request at the same time?
+Answer:
+Handling 1000 incoming requests in a Spring Boot application requires careful attention to various aspects, such as concurrency, thread management, resource optimization, and scalability. Here are the steps you can take:
+
+1. **Thread Pool Configuration**:
+   Configure the embedded Tomcat server or any other server to handle a large number of concurrent threads efficiently.
+
+   ```java
+   server:
+     tomcat:
+       threads:
+         max: 200
+         min-spare: 20
+   ```
+
+2. **Asynchronous Processing**:
+   Use `@Async` for methods that can be executed asynchronously, offloading intensive tasks from the main request thread.
+
+   ```java
+   @Service
+   public class AsyncService {
+       @Async
+       public void performAsyncTask() {
+           // long-running task
+       }
+   }
+   ```
+
+3. **Load Balancing**:
+   Distribute incoming traffic across multiple instances of your application using load balancers like NGINX, HAProxy, or AWS ELB.
+
+4. **Connection Pooling**:
+   Ensure your database connections are efficiently managed using connection pooling libraries like HikariCP.
+
+   ```java
+   spring:
+     datasource:
+       hikari:
+         maximum-pool-size: 50
+   ```
+
+5. **Caching**:
+   Utilize caching mechanisms (e.g., Redis, Ehcache) to reduce the load on your database for frequently accessed data.
+
+6. **Circuit Breaker Pattern**:
+   Implement circuit breaker patterns using libraries like Resilience4j to prevent system overload during heavy traffic.
+
+   ```java
+   @Retry(name = "backendA")
+   @CircuitBreaker(name = "backendA", fallbackMethod = "fallback")
+   public String fetchData() {
+       // API call or database access
+   }
+   ```
+
+7. **Resource Optimization**:
+   Optimize resource usage by profiling your application and removing bottlenecks. Use tools like Spring Boot Actuator to monitor metrics.
+
+8. **Scaling**:
+   Utilize horizontal scaling by deploying multiple instances of your application across different nodes or containers.
+
+9. **Reactive Programming**:
+   For non-blocking I/O operations, consider using Spring WebFlux which is designed to handle large volumes of requests asynchronously.
+
+   ```java
+   @RestController
+   public class ReactiveController {
+       @GetMapping("/data")
+       public Mono<String> getData() {
+           return Mono.just("Hello, World!");
+       }
+   }
+   ```
+
+10. **Queueing Systems**:
+    Implement message queue systems like RabbitMQ or Kafka for handling request spikes and ensuring reliable processing.
+
+By following these steps, you can ensure that your Spring Boot application is capable of handling 1000 incoming requests efficiently.
 
 
