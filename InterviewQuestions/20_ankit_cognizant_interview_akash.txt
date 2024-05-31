@@ -37,6 +37,13 @@ HR: Akash (7980213894)
 33. What are the steps you will take to deploy spring boot application using external sever
 34. write down the code for singleton class
 35. tell me how many objects will be created and output of the below program:
+36. what is the difference between callable and runnable?
+37. write code for custom thread in java.
+38. what is executor framework and how it works?
+39. what is thread pool ? does executor framework uses it ?
+
+
+Answer for question no 35:
 public class Test1 {
 
 	public static void main(String[] args) {
