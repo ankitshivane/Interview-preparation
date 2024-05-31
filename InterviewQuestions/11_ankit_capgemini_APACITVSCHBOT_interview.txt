@@ -2,7 +2,7 @@ first round L1 Interview for another client in capgemini conducted by Ankita Sri
 where the pkg range was 16 to 18 LPA asked.
 interviewer contact: 9517456711
 Anita from hiring third party consultancy:6201423480
-
+scheduler divya patil:9404545546
 1. what is method reference in java 8?
 
 coding questions:
@@ -25,3 +25,13 @@ List<Employee>empagrgt=employees.stream().filter(i->i.getAge()>40).collect(Colle
 
 3. what are the different annotations you have used in your project?
 4. what is the difference between functional interface and normal interface 
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+rrdmello@hcltech.com
+deepalijadhav@hcltech.com
+mayur_rathor@hcltech.com
+Shadia.JS@hcltech.com
