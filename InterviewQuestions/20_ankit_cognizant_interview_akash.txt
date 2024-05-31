@@ -1,0 +1,57 @@
+first round happened with Cognizant on 31st May at 10AM email used: ankitshivane.as interview happened almost 40 min
+Interviewer: Nirupam Dey
+HR: Akash (7980213894)
+
+1. Can we use try with finally without cat h 
+2. Which is the topmost class in exception hierarchy 
+3. What is error class in exception handling 
+4. Let's say we have hashset collection in java and added one person class having one string and integer field. So in hashset added two objects p1. Add and p2 where both the contents of the P1 and P2 are same what will happen 
+5. What is the contents of hashmap method how will you write 
+6. What is the return type of hashcode method 
+7. What is we did override equals and hashcode in person class and then save it
+8. And what if we do not override the equals and hashcode in person class then what will happen 
+9. What if equals method is overriden properly for content equality but in hashcode overriden method we return a constant value what will happen 
+10. In spring boot which annotation is the first annotation will be used 
+11. What is dependency injection and it's trypes 
+12. What are the type of autowiring 
+13. Which dependency injection is the best and which one to use 
+14. So let's say we don't have an mandatory dependency means it is a optional then which one will be used
+15. Let's say there is one dependency which won't be available initially but can be available after 10 min or any later time then which annotation we will use in this cases
+16. What are the different annotation we used 
+17. How to return a any type as return type of rest api in rest api
+18. By default what are the types of rest APIs it can return without change
+19. Write down a entity and repository code
+20. What are the default method in the jpa responsitory available after creating it.
+21. Available in the jpa repository 
+22. Difference between persist and save 
+23. How to write a composite key in jpa
+24. What are the types of relationship you used in spring boot application entity 
+25. let's say there is a one to many relationships a
+26. The how will you write it 
+27. Which circuit breaker is used in your project (ans: resilience4j)
+28. Why resilience and why not hysterix
+29. How will you deploy your spring boot application (catch is type of packaging jar,war etc)
+30. What are the different changes you will do for changing packaging from jar to war
+31. Which server you are using in spring boot for deployment 
+32. Why haven't you use external sever 
+33. What are the steps you will take to deploy spring boot application using external sever
+34. write down the code for singleton class
+35. tell me how many objects will be created and output of the below program:
+public class Test1 {
+
+	public static void main(String[] args) {
+		String s1 = "Ankit";
+		String s2 = "Ankit";
+		String s3 = new String("Ankit");
+		String s4 = new String("Ankit");
+		System.out.println(s1 == s2);
+		System.out.println(s3 == s4);
+		
+		/**
+		 * correct answer:
+		 * true
+		   false
+		 */
+	}
+
+}
