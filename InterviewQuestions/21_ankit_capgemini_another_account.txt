@@ -21,7 +21,12 @@ Email used: ankitshivane.as
 9. How will you use external api in your spring boot application 
 10. How to call asynchronous way this external api
 11. How to resolve merge conflict
-
+12. how to make code thread safe?
+13. how to break immutability in java ?
+14. jow fo create a immutable claas in java?
+15. how to create a singleton class in java?
+16. what will happen if we make a clone copies of singleton object then we can have multiple objects of singleton right then how to prevent this behaviour?
+17. in which class or interface does clone method present?
 
 Status of first round: waiting for feedback
 
