@@ -41,7 +41,19 @@ HR: Akash (7980213894)
 37. write code for custom thread in java.
 38. what is executor framework and how it works?
 39. what is thread pool ? does executor framework uses it ?
+40. can we use try block with multiple catch block? if Yes what will be the order of those catch
+41. can we use try with finally without catch block (the answer is Yes we can use and even if there is any exception occuring in try block then it will execute the content of the finally first and then it will print the stack trace of the exception to the console and program flow will be disruptted unexpectedly. and another just a point for learning lets say while executing finally block we got another type of runtime exception then the original exception from try block will be overriden and we will get the exception from finally block in the console and not from try block. PF sample program for the same case below.
 
+try {
+			System.out.println("inside try");
+			int i = 10 / 0;
+		} finally {
+			System.out.println("inside finally");
+			String s = null;
+			System.out.println(s.toLowerCase());
+		}
+
+)
 
 Answer for question no 35:
 public class Test1 {

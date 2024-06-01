@@ -1,0 +1,16 @@
+Scheduler:	Sarita Janauti <Sarita.Bisht@citiustech.com>
+subject: Interview Reminder for D-DVT-020A-202-1-1.1 Technical Lead - I Java at CitiusTech
+first round Interview happened with citius Tech on 1st june 2024 at 4:15 PM
+Interviewer: Abhishek Gorale
+
+
+1. If we given you an mock ui screen or wireframe then what are the steps you will take to build that requirements? With which thing you will start first and why ?
+2. What are the rules in overriding 
+3. What about exception handling with method overriding 
+4. Let's say if there are few pages of the application is loading slowly how will you analyze and fix this issue what are the different steps you will take ?
+5. What is an orm in Java?
+6. What is spring Mvc and in that Mvc principle explain
+
+Status of first round: waiting for feedback
+
+Date of second round:NA

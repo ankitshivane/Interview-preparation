@@ -1,0 +1,28 @@
+from : priya.vitthal-amrute@capgemini.com
+
+interviewer : Khanum Akbar, Khan Shama --> khan-shama.khanum-akbar@capgemini.com
+
+Capgemini L1 first round interview 1 june at 2:00 pm
+Interviewer: shama khan Khanum Akbar
+Third party coordinator: amrin +919110616624
+
+email subject:#CGO#_L1_Java springboot microservices_ANKIT SHIVANE_9819634897
+
+Email used: ankitshivane.as
+
+1. What is functional interface 
+2. How caching is used in your project 
+3. What are the different microservices Design patterns you have used in your project 
+4. What is polymorphism in java
+5. Can I take a different return type of method in overriden method in java
+6. What is the default scope of a bean in spring boot 
+7. Let's say you and me are using the spring boot application from us and India then how many instances of bean will be created of the singleton bean
+8. Coding questions: from list of employees give me employee whose salary is greater than 25k and sort it by employee name
+9. How will you use external api in your spring boot application 
+10. How to call asynchronous way this external api
+11. How to resolve merge conflict
+
+
+Status of first round: waiting for feedback
+
+Date of second round:NA
