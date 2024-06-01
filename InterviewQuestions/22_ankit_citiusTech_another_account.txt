@@ -10,6 +10,7 @@ Interviewer: Abhishek Gorale
 4. Let's say if there are few pages of the application is loading slowly how will you analyze and fix this issue what are the different steps you will take ?
 5. What is an orm in Java?
 6. What is spring Mvc and in that Mvc principle explain
+7. what is SOLID principles?
 
 Status of first round: waiting for feedback
 
