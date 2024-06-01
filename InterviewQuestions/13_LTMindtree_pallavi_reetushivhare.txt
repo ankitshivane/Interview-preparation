@@ -3,6 +3,9 @@ Interviewer Priyanka ghore
 Hr : kashish Singh and Ritu shivhare
 third party: pallavi
 
+Cleared Online test now first round is scheduled at 14th May 3PM result is cleared waiting for 2nd round (email used ankshivane)
+
+first round:
 1. What is default and static method and it's purpose 
 2. How do you handle exception in spring boot application 
 3. I'm controller advice and exception handler annotations which use is classlevel and method level
