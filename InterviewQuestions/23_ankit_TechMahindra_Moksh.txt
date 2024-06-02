@@ -1,0 +1,64 @@
+Tech Mahindra for another account 
+First round at 2nd June 3:00 to 3:37 pm for the position of Senior Java Developer(NR)
+email used: ankitshivane.as
+Interviewer: srinivas from cogbee
+received mail from : interviews@cogbee.io
+contact person from Tech Mahindra was Moksh: 7935200313
+Interview was fine only one question I was not able to answer rest all I have answered correctly 
+
+1. What are the different features of java 8
+2. What is lambda expression and why we should use that
+3. What is stream in java 8
+4. What are the different annotations you have used in spring boot list them 
+5. What is the internal working of hashmap in java 
+6. What is the significance of equals and hashcode method 
+7. What is string and stringbuilder in java
+8. When should we use string and stringbuilder in java 
+9. What is the internal working of @springBootApplication annotation 
+10. How two microservices communicate with each other 
+11. What are the different design patterns you have used 
+12. What is factory design pattern
+13. Difference between linkedlist and Arraylist 
+14. Coding questions:
+15. Write a Java program to display numbers b/w 100-200, whose sum of first and third digit is equal to the middle. Ex:- 121,132,143,165,176,...
+
+Answer for Que. 15 I have wrote:
+
+package com.practice;
+
+import java.util.stream.IntStream;
+
+public class PrintSumOfNum {
+	/**
+	 * Write a Java program to display numbers b/w 100-200, whose sum of first and
+	 * third digit is equal to the middle. Ex:- 121,132,143,165,176,...
+	 */
+	public static void main(String[] args) {
+		IntStream.rangeClosed(100, 200).filter(PrintSumOfNum::isValidSum)
+		.forEach(i -> {
+			System.out.println("Num:" + i);
+		});
+	}
+
+	public static boolean isValidSum(int num) {
+		int firstDigit = num / 100;
+		int middleDigit = (num / 10) % 10;
+		int thirdDigit = num % 10;
+		return (firstDigit + thirdDigit) == middleDigit;
+
+	}
+
+}
+/**
+OUTPUT:
+Num:110
+Num:121
+Num:132
+Num:143
+Num:154
+Num:165
+Num:176
+Num:187
+Num:198 
+
+*/

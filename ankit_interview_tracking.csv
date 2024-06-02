@@ -1,17 +1,17 @@
 No,Company,HR Name, HR Contact,first_round,second_round, Status
-1,Axis Bank,Yash,9769090365,Yes,No, waiting for 2nd round result
-2,DXC Technology,Netra,9035688320(netra) and 6381802445,No,NA,Rejected due to one coding question failed to run
-3,Accenture,vindhi and Apoorva,7904329480,Yes,Yes,Selected but just need to take followup with Apoorva about package and location revision in offer leter
-4,Capgemni, Akansha,9592285145 and 6265316050,Yes,No, selected in 1st round shared the documents with vani Usha and 2nd client round with Nomura done but not selected so my profile went to pool for public hiring in CG
-5,Tech Mahindra,Shreyashi and adarsh and Deepa Hr,9475304488 (shreyashi) and 9179379363 (adarsh) and 7988030574,Yes,Yes,2nd round done waiting for results its almost cleared as Deepa took my documents for processing
+1,Axis Bank,Yash,9769090365,Selected,Rejected, Rejected in second round due to its difficulty level in system designing questions
+2,DXC Technology,Netra,9035688320(netra) and 6381802445,Rejected,NA,Rejected due to one coding question failed to run
+3,Accenture,vindhi and Apoorva,7904329480,Selected,Selected,Selected and secured an offer with Accenture
+4,Capgemni, Akansha,9592285145 and 6265316050,Selected,waiting for 2nd round, selected in 1st round shared the documents with vani Usha and 2nd client round with Nomura done but not selected so my profile went to pool for public hiring in CG
+5,Tech Mahindra,Shreyashi and adarsh and Deepa Hr,9475304488 (shreyashi) and 9179379363 (adarsh) and 7988030574,Selected,Selected,Selected and offer discussion is in progress with Deepa Hr from Tech Mahindra
 6,Wipro,Deepika,8123898331,Waiting for feedback,NA,L1(first) round interview done on 6 May waiting for feedback from them
 7,HCL,Ajith from hiring consultancy,9150062402,Waiting for feedback,NA, first round done waiting for confirmation 
-8,CitiusTech,Tanya gond hiring consultant,9768450805,Yes,Not Schedule,second round not schedule due to technical issue at my end so they rejected my profile and if rejected can not apply second time as i shared pan card with them and they confirmed my profile does exist in there system.
-9,Infosys,HR,8050962694 and 8951989115,Selected,Selected,waiting for result of second round happened on 22nd May also need to check with talent acquisition team for submission issue
+8,CitiusTech,Tanya gond hiring consultant,9768450805,Selected,Cancelled my candidature,second round not schedule due to technical issue at my end so they rejected my profile and if rejected can not apply second time as i shared pan card with them and they confirmed my profile does exist in there system.
+9,Infosys,HR,8050962694 and 8951989115,Selected,Selected,second round happened on 22nd May and able to secure offer with Infosys discussion is in progress with Parul HR
 10,Capgemini (for another client/account),9517456711 (interviewer contact) and 6201423480(third party),ankita srivastava as interviewer and Anita as hiring third party, selected, waiting for notification,First round done on 17th May 9:15 AM waiting for result interview was quiet good and asked the range of 16 to 18 lpa and current offer holding as 14+ lpa from accenture (shivaneankit)
 11,HCL (for another account),maheswarareddy.kutag,8951397036 (third party),waiting for feedback,NA,first round done on 18th May 10 AM waiting for result
 12,Ltimindtree (another account),kashish Singh and Ritu shivhare,8630483977 (ritu shivhare) and 7448054385 (pallavi third party),Selected,Application withdraw by self,Selected in first round then withdraw the application because got offer from another account in Ltimindtree
-13,Ltimindtree (another account),Poonam rathor HR,7218517919,Selected,Selected,selected in both rounds waiting for offer to release
+13,Ltimindtree (another account),Poonam rathor HR,7218517919,Selected,Selected,Selected and able to secure an offer with LTIMindtree
 14,HCL Tech again for anaother account 2,Deepali,9769473315,Selected,Rejected,First round done and selected on 24May also 2nd round done by nomura client on 30 May waiting for feedback rejected in 2nd round of interview 
 15,Capgemini (for another client/account),Dhanu,9995530365,Waiting for feedback,Pending,first round happened 23rd May as per me interview as quite good waiting for confirmation
 16,Coforge,NA,NA,Rejected,NA,the interview with coforge for HSBC client happened on 13th May at 10 AM and rejected
@@ -21,3 +21,4 @@ No,Company,HR Name, HR Contact,first_round,second_round, Status
 20,Cognizant,Akash,7980213894,Waiting for feedback,NA,first round happened with Cognizant on 31st May at 10AM waiting for feedback
 21,Capgemini (from priya account),Amrin(from third party),9110616624(amrin),Waiting for feedback,NA,first round done on 01st Jan 2024 at 2:00PM waiting for the feedback
 22,CitiusTech (another account),Sarita(from third party),9167436637(Sarita),Waiting for feedback,NA,first round done on 01st Jan 2024 at 4:15PM waiting for the feedback
+23,Tech Mahindra (for another account),Moksh,7935200313,Waiting for feedback,NA,First round at 2nd June 3:00 to 3:37 pm for the position of Senior Java Developer(NR)
