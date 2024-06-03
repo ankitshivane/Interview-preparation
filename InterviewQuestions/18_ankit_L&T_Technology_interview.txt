@@ -34,3 +34,132 @@ public class Main
 		}
 	}
 }
+
+Status: Selected in first round 2nd round schedule on 3 June at 3 PM
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+2nd round with l&t technologies happened at 3rd June 2024 at 3 to 4 pm 1 HR interview happened 
+Interviewer: Joseph Amudhan Fernando
+Scheduler hr: chittibabu
+Email used: ankitshivane.as
+
+1. Does jvm is platform independent or dependent 
+2. What language jvm is written?
+3. Does Java uses pointer ever? (Tricky question as jvm written in c and c++ it internally uses definitely for memory and all management)
+4. Have you used multi threading in application and how ?
+5. What is the relationship of lambda expression with functional interface 
+6. What is the hashing and how it's working?
+7. Which collection you will use if you want unique elements with sorting order 
+8. Can we use below code in main method 
+		final ArrayList<String> ls = new ArrayList<>();
+		ls.add("apple");
+
+(the correct answer is Yes we can use final keyword in methods and here as the AL is a mutable object then we can add as many objects inside it using add() method)		
+9. Write a program for creating a custom stack in java 
+10. How will you validate a password in Java? below are the condition so we using this need to validate a given input password.
+
+	  At least one numeric digit
+	  At Least one Small/Lowercase Letter
+	  At Least one Capital/Uppercase Letter
+	  Must not have space
+	  Must not have slash (/)
+	  At least 6 characters 
+	 
+11. Can one thread communicate with another thread but in different process?
+12. What is the difference between thread and process 
+13. What are the steps to follow to create a spring boot application from scratch 
+14. Let's say if you have one e commerce applications and it's a busy day and people are ordering in bulk and you don't want to loose any of the order and other information also taking care of payment gateway details are most of them are third party which we can not reply on so how will you design microservice system on such thing
+15. Let's say if you have one application server and few database server you want all people can communicate only with application server and not with the database server directly so what things you will take care
+16. Whare the different AWS security services you will use for such scenarios
+
+
+The program I tried for question no 9 is:
+
+public class CustomStack {
+	int maxSize;
+	int top;
+	int[] stackArray;
+
+	public CustomStack() {
+
+	}
+
+	public CustomStack(int size) {
+		this.maxSize = size;
+		this.top = -1;
+		stackArray = new int[maxSize];
+	}
+
+	public void push(int value) {
+		stackArray[++top] = value;
+	}
+
+	public int pop() {
+		int i = 0;
+		if (stackArray != null) {
+			i = stackArray[top--];
+		}
+		return i;
+	}
+
+}
+
+
+The program I wrote during interview for question no 10 was as below as interviewer wanted to know sudo code or idea:
+
+package com.practice;
+
+import java.util.ArrayList;
+
+public class passwordValidator {
+
+	/**
+	 * 
+	 *  At least one numeric digit
+	 * 
+	 * At Least one Small/Lowercase Letter
+	 * 
+	 * At Least one Capital/Uppercase Letter
+	 * 
+	 * Must not have space
+	 * 
+	 * Must not have slash (/)
+	 * 
+	 * At least 6 characters
+	 * 
+	 * 
+	 */
+	public static void main(String[] args) {
+		String password1 = "password21212@sdsd";
+		System.out.println("is valid password:" + passValidator(password1));
+	}
+
+	public static boolean passValidator(String password) {
+		boolean isDigitPresent = false;
+		boolean isLowerCase = false;
+		boolean isUpperCase = false;
+		boolean containsSpace = false;
+		boolean checkSlashChar = false;
+		char[] passArr = password.toCharArray();
+		for (char p : passArr) {
+			if (Character.isDigit(p)) {
+				isDigitPresent = true;
+			} else if (Character.isLowerCase(p)) {
+				isLowerCase = true;
+			} else if (Character.isUpperCase(p)) {
+				isUpperCase = true;
+			} else if (Character.isSpaceChar(p)) {
+				containsSpace = true;
+			} else if (p == '/') {
+				checkSlashChar = true;
+			}
+		}
+		if (isDigitPresent && isLowerCase && isUpperCase && !containsSpace && !checkSlashChar
+				&& password.length() >= 6) {
+			return true;
+		}
+		return false;
+	}
+
+}

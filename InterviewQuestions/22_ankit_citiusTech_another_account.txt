@@ -12,6 +12,7 @@ Interviewer: Abhishek Gorale
 6. What is spring Mvc and in that Mvc principle explain
 7. what is SOLID principles?
 
-Status of first round: waiting for feedback
+Status of first round: Selected
+Note: selected in first round of interview and second round is scheduled on 4th June at 1 to 1:30 PM
 
 Date of second round:NA

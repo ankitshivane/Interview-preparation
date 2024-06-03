@@ -28,6 +28,7 @@ Email used: ankitshivane.as
 16. what will happen if we make a clone copies of singleton object then we can have multiple objects of singleton right then how to prevent this behaviour?
 17. in which class or interface does clone method present?
 
-Status of first round: waiting for feedback
+Status of first round: Selected
+Note: selected in first round of interview and got call from HR of capgemini name ashwini and discuss the expected offer of 18LPA + 10% variable pay (20 LPA) she said there might be chance that there will be another 2nd round or if not then we will release the offer. and the offer is for Pune Location.
 
 Date of second round:NA
