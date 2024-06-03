@@ -21,6 +21,11 @@ Interview was fine only one question I was not able to answer rest all I have an
 13. Difference between linkedlist and Arraylist 
 14. Coding questions:
 15. Write a Java program to display numbers b/w 100-200, whose sum of first and third digit is equal to the middle. Ex:- 121,132,143,165,176,...
+16. what are the different entity relationship annotations available ?
+17. what is @ManyToMany and @OneToMany Annotation and how to use that ?
+18. what is controllerAdvice annotation ? and what it do ?
+19. difference between @Controller and @RestController?
+20. what is hashing and what is the time complexity of hashing?
 
 Answer for Que. 15 I have wrote:
 
