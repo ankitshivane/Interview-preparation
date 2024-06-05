@@ -1,0 +1,65 @@
+Deloitte interview 
+Interview happened at 4 June 3 to 3;45 pm 
+Interviewer: Shipra 
+Hr: S, Mounika (smouni@deloitte.com)
+Third party: Priyanka joshi (priyankajoshipj220@gmail.com) her contact: 9761415469.
+Current offer holding told: 18 LPA
+1. What are the different microservices design patterns you have used in your project 
+2. How microservices in your project are communicating 
+3. How you have handle exception in your project using traditional core Java way and in spring boot application 
+4. What are the different starter dependency you have used in your project 
+5. How dependency management is being done in your project 
+6. Then 3 coding questions
+7. What are the rest api methods you have used ?
+8. Which are idempotent and non idempotent
+
+Q.6 Coding questions:
+A) Count number of occurrences Input: arr[] = {1, 1, 2, 2, 2, 2, 3,}, x = 2
+write a solution using java 8 stream
+
+Correct Solution I gave:
+		int[] arr = { 1, 1, 2, 2, 2, 2, 3 };
+		Arrays.stream(arr).filter(i -> Integer.valueOf(2).equals(i)).boxed()
+				.collect(Collectors.groupingBy(i -> i, Collectors.counting())).entrySet().stream()
+				.forEach(i -> {
+					System.out.println(i.getKey() + ",occurences:" + i.getValue());
+				});
+
+B) Array(10, 3, 23, 86, 8, 9, 44, 5, 7);
+find the second LARGEST Number from the given array of the elements using only one loop and without using any sorting wirte program in core java approach not java 8.
+
+Correct Solution I gave: ::::
+int[] numbers = { 10, 3, 23, 86, 8, 9, 44, 5, 7 };
+		int largestNum = 0;
+		int seclargestNum = 0;
+		for (int number : numbers) {
+			if (number > largestNum) {
+				seclargestNum = largestNum;
+				largestNum = number;
+			} else if (number > seclargestNum && number != largestNum) {
+				seclargestNum = number;
+			}
+		}
+		System.out.println(seclargestNum);
+
+
+C)	reverse elements of given array [1, 4, 56, 22, 87] without creating extra array
+wirte program in core java approach not java 8.
+
+
+Correct Solution I gave: ::::
+	int[] arr = { 1, 4,63 ,56, 22, 87 };
+		int left = 0;
+		int right = arr.length - 1;
+		while (left < right) {
+			int temp = arr[left];
+			arr[left] = arr[right];
+			arr[right] = temp;
+
+			left++;
+			right--;
+
+		}
+		for(int a:arr) {
+			System.out.print(a+" ");
+		}

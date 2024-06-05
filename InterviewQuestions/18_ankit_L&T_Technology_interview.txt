@@ -72,7 +72,7 @@ Email used: ankitshivane.as
 14. Let's say if you have one e commerce applications and it's a busy day and people are ordering in bulk and you don't want to loose any of the order and other information also taking care of payment gateway details are most of them are third party which we can not reply on so how will you design microservice system on such thing
 15. Let's say if you have one application server and few database server you want all people can communicate only with application server and not with the database server directly so what things you will take care
 16. Whare the different AWS security services you will use for such scenarios
-
+17. how to you call another constructor of same class?
 
 The program I tried for question no 9 is:
 

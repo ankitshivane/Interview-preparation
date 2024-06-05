@@ -1,0 +1,21 @@
+Tech Mahindra 
+first round Interview happened at 4 June 4 pm 
+Interviewer: parthiv jani
+Hr: sai KS00759832@techmahindra.com
+third party consultant: Dinesh Raj 919966331403
+Current offer holding told: 18 LPA
+
+1. What is spring bean lifecycle 
+2. Let's say there is datasource.properties and I want to inject those properties into my configuration class how to do this
+3. What are the different ways to do microservice communication 
+4. What are the different methods present inside resttemplate 
+5. What are the different proportion level in spring boot transaction 
+6. What is the difference between map and flatmap
+7. What is the difference final finally and finalized
+8. What is the difference between association , composition and aggregation 
+9. How to acquire a lock In java
+10. What is string pool in java
+11. What are the memory management wise enhancement happened in spring boot 
+12. What are the different classloader in java
+
+Status: Waiting for feedback
