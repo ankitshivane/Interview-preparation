@@ -1,0 +1,13 @@
+first round with Oracle happened at Thu, 06 Jun, 2024 at 02:30 PM Asia/Calcutta 
+interviewer name: Vineet
+Oracle HR recruiter: Ajumal Khan (ajumal.khan@oracle.com)
+email used: ankitshivane.as
+expected holding salary discuss 18 LPA
+
+1. discuss end to end flow of request in application
+2. how to scale docker container in project
+3. how to represent FK in the Java entity? 
+4. list of dependency used in spring boot 
+and many scenario based interview question
+
+Status: Waiting for feedback of first round
