@@ -1,0 +1,31 @@
+first round of interview happended with Mphasis for another account at 8 June 2024 2:00 PM to 2:45 PM
+Scheduler: Praneetha devireddy 
+take feedback from him tommorow
+email used ankitshivane.as
+expected package told them as 19 to 20 LPA as currently holding 18 LPA
+interview mail received from kharva.zeel@mphasis.com oN 7 JUNE
+
+1. how microservices communicate with each other
+2. what are solid design principles
+3. have you used any design pattern in your project (I explained about the observer patttern)
+4. write a program in java 8 for printing first repeated character from given string.
+any many more interview question on Java 8, spring boot and java
+
+Answer for Coding question 4 I have written is:
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
+public class FirstRepeated {
+//Mphasis 8 june 2024 at 2:00 pm
+	public static void main(String[] args) {
+		String str = "Ankit is a java programmer";
+		String input = str.toLowerCase().replaceAll("\\s", "");
+		Set<String> outp = new HashSet<>();
+		String s = Arrays.stream(input.split("")).filter(i -> !outp.add(i)).findFirst().get();
+		System.out.println(s); // correct output: i
+
+	}
+
+}

@@ -1,0 +1,27 @@
+attended first round of interview on 9 June 1 PM to 1:40 PM.
+interviewer name: Amit from cogbee
+interview is schedule and taken by cogbee for Ascendion for the client JP Morgan 
+scheduler and recruiter: Akshay Vaswani (akshay.vaswani@ascendion.com)
+the expected range I told them as 19 to 20 but I think he is ready for 19 
+email used ankitshivane.as
+Ascendion 
+1. What is L in solid principles 
+2. How inter microservices communication is handle in the project 
+3. Difference between consumer and suppliers 
+4. What is api gateway 
+5. Any idea on rate limiting 
+6. How to fetch third highest salary of a employee SQL
+7. Difference between put vs patch 
+8. What is @controllerAdvice annotation in spring boot 
+9. What are the different java design patterns you have used in the project? Explain Builder design pattern 
+10. What are indexes in the SQL 
+11. Which docker command you will use to look into the docker container 
+12. When should we use LinkedList and when should we use ArrayList
+13. So how will you avoid ConcurrentModificationException while using ArrayList 
+14. What are the different spring module you have used
+15. What are the different features of spring cloud you know 
+16. How do you manage transaction in kafka 
+17. How do you maintain code quality of application 
+18. How you will prevent SQL injection
+19. What is right join in sql
+20. what is enum in Java?

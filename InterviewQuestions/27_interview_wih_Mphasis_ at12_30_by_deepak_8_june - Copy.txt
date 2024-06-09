@@ -1,0 +1,115 @@
+first round of interview happended with Mphasis for one account at 8 June 2024 12:30 PM
+Scheduler: Deepak roy 
+take feedback from him tommorow
+email used ankitshivane.as
+expected package told them as 19 to 20 LPA as currently holding 18 LPA
+
+
+1.	what are the different containers available in spring
+2.	what is context aware in spring framework?
+3.	what are the different java OOPs concept
+4.	what feign client and how it is different from resttemplate? why we should use feign client
+5.	what is resttemplate and how we can communicate using resttemplate?
+6.	what are microservices and its characterstics?
+7.	how to do asynchronous comunication in your projects
+8.	write down a code for singleton class
+9.	how to create a group of object in java ?
+10.	how to create a singleton enum
+11.	how lazy and eager loading of object in spring is done (not talking about the JPA based it is meant by spring internal)
+12. create one Functional interface with below method and print sum of square from a to b 
+int sumofsquare(a,b);
+
+
+Answer for Que 8 I wrote in inteview:
+class Person{
+private static Person obj=null;
+
+private Person(){
+
+}
+
+public static Person getMyPerson(){
+if(obj==null){
+obj=new Person();
+}
+return obj;
+}
+
+
+}
+
+
+
+-----
+
+Answer for Que 12 I wrote in inteview:
+
+I wrote bad code but correct code should be as below::::
+
+package com.practice;
+
+import java.util.stream.IntStream;
+
+interface SumOfSquare {
+	int sumOfSquare(int a, int b);
+}
+
+public class Test3 {
+	public static void main(String[] args) {
+
+		SumOfSquare obj = (int a, int b) -> {
+			return IntStream.rangeClosed(a, b).map(i -> i * i).sum();
+		};
+		System.out.println(obj.sumOfSquare(1, 4));			//OUTPUT: 30
+	}
+}
+
+---
+
+
+13. what is the output of the following program:
+
+
+class Base {
+
+	public void test() {
+
+	}
+
+}
+
+class Base1 extends Base {
+
+	public void test() {
+		System.out.println("BASE1");
+
+	}
+
+}
+
+class Base2 extends Base {
+
+	public void test() {
+		System.out.println("BASE2");
+	}
+
+}
+
+
+
+public class Test3 {
+	public static void main(String[] args) {
+
+		Base obj = new Base1();
+
+//		 ((Base2)) obj.test();		// Correct OUTPUT: it will give compilation error. fail to compile if we uncomment this
+		obj.test(); // Correct Output: it prints -> BASE1
+
+		Base obj3 = new Base();
+		obj3.test(); // Correct Output: print/do nothing
+
+		Base obj2 = new Base2();
+		obj2.test(); // Correct Output: it prints -> BASE2
+
+	}
+}
