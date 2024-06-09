@@ -25,3 +25,8 @@ Ascendion
 18. How you will prevent SQL injection
 19. What is right join in sql
 20. what is enum in Java?
+21. explain the usage of qualifier annotations in spring boot.
+22. what are the different bean scope available in Spring boot?
+23. How spring boot Signleton bean scope is different from Java Bean Scop?
+24. Does Singleton bean created by spring boot is per application level or per IOI container level or per JVM level single object or how it is??
+25. Write a SQL query to print 3rd Highest salary of employee? Note without using subquery

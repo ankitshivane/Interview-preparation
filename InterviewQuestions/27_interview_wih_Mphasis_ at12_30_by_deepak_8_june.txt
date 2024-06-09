@@ -4,6 +4,7 @@ take feedback from him tommorow
 email used ankitshivane.as
 expected package told them as 19 to 20 LPA as currently holding 18 LPA
 
+interview email received from ks.harikumar@mphasis.com on 7 june
 
 1.	what are the different containers available in spring
 2.	what is context aware in spring framework?
@@ -18,6 +19,7 @@ expected package told them as 19 to 20 LPA as currently holding 18 LPA
 11.	how lazy and eager loading of object in spring is done (not talking about the JPA based it is meant by spring internal)
 12. create one Functional interface with below method and print sum of square from a to b 
 int sumofsquare(a,b);
+13. What are the different OOPs concept in Java?
 
 
 Answer for Que 8 I wrote in inteview:

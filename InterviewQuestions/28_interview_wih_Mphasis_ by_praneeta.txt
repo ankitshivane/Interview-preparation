@@ -9,6 +9,8 @@ interview mail received from kharva.zeel@mphasis.com oN 7 JUNE
 2. what are solid design principles
 3. have you used any design pattern in your project (I explained about the observer patttern)
 4. write a program in java 8 for printing first repeated character from given string.
+5. what are profiles in spring boot?
+
 any many more interview question on Java 8, spring boot and java
 
 Answer for Coding question 4 I have written is:
