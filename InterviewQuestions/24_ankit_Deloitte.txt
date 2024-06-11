@@ -63,3 +63,80 @@ Correct Solution I gave: ::::
 		for(int a:arr) {
 			System.out.print(a+" ");
 		}
+		
+Status: Selected in first round
+-------------------------------------------------------
+
+Interview round 2
+
+
+2nd round with Deloitte at 12 to 12:45 pm on 11 June 2024
+
+Interviewer: phani konduru
+Scheduler: ram and maunika
+
+Email used: ankitshivane.as@gmail.com
+
+Package discussed of 19 to 20 lpa expected 
+
+1. How you communicate with another microservices using rest api
+2. What are the advantages of using microservices 
+3. Why one should select microservices what are the different factors to consider microservices 
+4. What are the different annotations used in spring boot application 
+5. What is the purpose of @componentScan annotation and if we can use this seperately then why it is present in @SpringBootApplication 
+6. So as a part of component scanning process which all components is searched by @componentScan
+7. What are the different ways to define beans in spring boot application 
+8. What is the return type of method annotated with @bean 
+9. If I have to define some beans for specific environment then how to do that
+10. How do you specify a the spring boot application will run for prod or dev or local environment 
+11. What are the ways to run a spring boot application on local machine what are the commands 
+12. What are the features of java 8
+13. What is functional interface 
+14. What is default and static method in java
+15. Coding questions 1:From list integer seperately even and odd using streams java 8
+16. Coding questions 2: from list of integers give me all even numbers
+17. How do you create thread in java
+18. What are the use cases where one should use multi threading or create thread in java or u can explain for your project also
+19. How to specify a image name in docketfile which attribute is used
+20. What are the exception you faced while working with spring boot application and how did you resolve them
+21. How you have used asynchronous processing in your project
+
+program I wrote in deloitte for java 8 coding question.
+
+package com.practice;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class StreamJava1 {
+
+	public static void main(String[] args) {
+
+		/**
+		 * Deloitte 2nd round
+		 */
+		List<Integer> numbers = Arrays.asList(1, 2, 55, 22, 4, 6);
+		//Question:1
+		List<Integer> evenNumber = numbers.stream().filter(i -> i % 2 == 0).collect(Collectors.toList());
+		System.out.println("Even number filtered:"+evenNumber);
+
+		/*
+		 * OUTPUT:
+		 Even number filtered:[2, 22, 4, 6]
+		 */
+		 //Question:2
+		Map<Boolean, List<Integer>> output = numbers.stream().collect(Collectors.partitioningBy(i -> i % 2 == 0));
+		System.out.println("All Even Number:" + output.get(true));
+		System.out.println("All Odd Number:" + output.get(false));
+		
+		/*
+		 *OUTPUT: 
+		 All Even Number:[2, 22, 4, 6]
+		 All Odd Number:[1, 55]
+		 */
+
+	}
+
+}
