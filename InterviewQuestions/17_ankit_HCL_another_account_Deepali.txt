@@ -123,3 +123,23 @@ public class ReadFile {
 	}
 
 }
+
+Status: Rejected
+
+-------------------------------------------------
+I kept interacting with Raji so she schedule my another 2nd round with another Nomura client 
+HCL interview for 2nd round 
+interview happened on 13 June 2:00 PM to 2:40 PM
+Interviewer: Satyavijya from nomura client 
+Scheduler: Raji 9867644712
+Hr: Deepali from HCL 9769473315
+Interview happened in 13 June on 2 to 2:35 pm
+1. Let's say I have a list of employees from that from that I want to remove the duplicate how to do that and uniqueness will be decide on id, first name and last name 
+2. Let's say I have a list of integer containing millions of record and I want to search a number is less time
+3. I have a 10 child table to main employee table I want if I delete a record from employee then it should also get deleted from 10 child table too ( answer by using trigger)
+4. If I have a table and there is a column status I want it should only have only active and inactive value and not other value to restrict how to do that ( answer is check constraint in SQL)
+5. I have three threads started  and I want to ensure that their order of execution first t1 then t2 then t3 ( answer is join )
+6. In Java streams coding questions let's Say from list of employees I have to convert that list to map where key is employee id and value is corresponding employee object 
+7. In Java streams 2 coding questions:  that let's of each employee will have a list of JOB class object then I want to get list of all jobs from each employee to a list using only one method of stream (answer flatMap)
+8. From unix let's say I have java application is running on Linux how to check the Java application is running on list process. He to get that process 
+9. In Linux I have CSV file inhave 20 columns how to fetch 1, 5th or 20 column data in another file from this csv

@@ -1,7 +1,7 @@
 Deloitte interview 
 Interview happened at 4 June 3 to 3;45 pm 
 Interviewer: Shipra 
-Hr: S, Mounika (smouni@deloitte.com)
+Hr: S, Mounika (smouni@deloitte.com) 9345033687
 Third party: Priyanka joshi (priyankajoshipj220@gmail.com) her contact: 9761415469.
 Current offer holding told: 18 LPA
 1. What are the different microservices design patterns you have used in your project 
@@ -140,3 +140,17 @@ public class StreamJava1 {
 	}
 
 }
+
+
+---
+
+3rd Client round for Experian
+interviewer: Rakesh Bharat
+
+Interview was totally practical
+1. Write a Entire Spring Boot application from scratch by connecting to DB
+2. Write Junit Test case for service imple
+3. changes to the existing program based on the question asked by interviewer
+4. why postgreSQL and not MySQL
+
+Status: Selected and able to secure an offer from Deloitte for experian client

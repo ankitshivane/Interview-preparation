@@ -1,0 +1,40 @@
+Genpact first round interview on 13 june at 3 to 4 pm
+interviewer name raghava bala ch, Reddy
+scheduler hr: geetanjali awasthi 8595850760
+email used: ankitshivane.as@
+Status: selected in first round
+
+1. explain different functional interfaces used in project
+2. write code for Singleton design pattern class
+3. explain different java design pattern you have used
+4. explain different microservices design pattern you used in project
+5. what are the different annotations used in spring boot project
+6. explain purpose of @entity @Table and @Id 
+7. what iare the steps to take to connect spring boot application to database
+8. how to fetch data from database table using jpa? what are the ways
+9. what is meaning of method references
+10. what is intermediate and terminal operator in java
+11. what is ForkJoin
+12. explain internal working of HashMap in java 
+13. Coding question 1: from array of string search for given word and give its count
+String[] names=
+{"java Ruby struts", "spring java", "spring python"};
+String word="spring";
+code i wrote: Long springCount=Arrays.stream(names).filter(w->w.contains(word)).count();
+14. coding question 2: now for the same thing print the word name and its count for example spring:2
+code I written but not given expected output:
+<String,Long> countsWitWord=Arrays.stream(names).filter(w->w.contains(word)).collect(Collectors.groupingBy(i->i,Collectors.counting()));
+
+15. now write same proram in code java 
+code I wrote: 
+
+Map<String,Integer> cw=new HashMap();
+for(String name:names){
+    if(name.contains(word)){
+        cw.put(word,cw.getOrDefault(word,0)+1);
+    }
+}
+
+cw.entrySet().stream().forEach(i->{
+   System.out.println("Word:"+i.getKey()+", count:"+i.getValue()); 
+});
