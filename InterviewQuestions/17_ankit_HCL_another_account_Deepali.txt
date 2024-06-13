@@ -143,3 +143,6 @@ Interview happened in 13 June on 2 to 2:35 pm
 7. In Java streams 2 coding questions:  that let's of each employee will have a list of JOB class object then I want to get list of all jobs from each employee to a list using only one method of stream (answer flatMap)
 8. From unix let's say I have java application is running on Linux how to check the Java application is running on list process. He to get that process 
 9. In Linux I have CSV file inhave 20 columns how to fetch 1, 5th or 20 column data in another file from this csv
+10. Read the file and store it into data database and the file is huge so i want achive something like how to make sure thatvinly one kaba program will run and if we are runbin another command prompt sith same program then it should ghore error
+11. Let's say if we have one class employee for example containing one ArrayList of jobs and one getter method returning the list of employees so in another class we create object of employee class and using Jobs temp= obj.getJobs(); 
+So now we modified the field of Jobs using temp variable then what will happen here does it will affect the main employee or only temp field
