@@ -13,3 +13,34 @@ Scheduler: Kuldeep 9910962646
 8. Coding Question 1: using core java approach find the occurrence of each character in string ?
 9. Coding Question 2: now from the Map of String,Integer created as output in above program sort the map using integer value using Java 8 approach
 10. what is Spring AOP?
+
+
+Code I wrote for Que No.5,8,9:
+
+package com.practice;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class TestCls {
+	public static void main(String[] args) {
+		String input = "aaaakkbbbz";
+		//Code for ques 8
+		Map<Character, Integer> countMap = new LinkedHashMap<>();
+		for (char ch : input.toCharArray()) {
+			countMap.put(ch, countMap.getOrDefault(ch, 0) + 1);
+		}
+
+		System.out.println(countMap);
+		
+		//code for ques 9
+		countMap.entrySet().stream().sorted(Map.Entry.comparingByValue()).forEach(i->{
+			System.out.println("Key:");
+		});
+		/**
+		 * SQL Query for Que 5
+		 
+		select distinct salary from Employee order by salary desc offset 3 limit 1;
+		 */
+	}
+}
