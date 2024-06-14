@@ -1,0 +1,15 @@
+first round of interview happened on 14 June 4 PM to 4:30 PM
+interviewer: Harshad 
+Scheduler: Kuldeep 9910962646
+
+
+1. how to handle failure in spring boot application
+2. what is the difference between ArrayList and LinkedList
+3. what is Reflection API?
+4. what is Index in SQL?
+5. find the 3rd highest salary of Employee
+6. what is @Qualifier annotation in sprng Boot?
+7. what is the use purpor of redis in application?
+8. Coding Question 1: using core java approach find the occurrence of each character in string ?
+9. Coding Question 2: now from the Map of String,Integer created as output in above program sort the map using integer value using Java 8 approach
+10. what is Spring AOP?
