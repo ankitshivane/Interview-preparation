@@ -1,0 +1,11 @@
+First round happened with IBR On 17 June at 2 to 2:30 PM
+Interviewer: Aditya
+HR Scheduler: Anusha
+
+1. explain me the process and different layers of Endpoints you have developed from each perspective
+2. so how will you restrict an endpoint to be access by specific roles only and not all?
+3. what are the microservices design patterns used?
+4. explain what is circuit breaker design pattern and how you have implemented it?
+5. how circuit breaker will change its state from open to resume back? how does it know?
+6. what is the idea of a microservices?
+7. how do you scale a microservices in your project?

@@ -1,0 +1,23 @@
+Interviewer:sk mohinuddin   skmohinuddin0812@gmail.com
+Scheduler: sowmya sowmya.mukkara@euclidinnovations.com
+
+first round of screenning call on 15 June at 1 to 1:30 PM
+for the client JPMC
+1. for the given map sort the data using value
+map.put("Ram", 10);
+map.put("Laxman", 21);
+map.put("Ravan", 20);
+
+
+map.entrySet().stream().sorted(Map.Entry.comparingValue()).forEach(i->{
+System.out.println(i.getKey()+""+i.getValue);
+});
+
+2. now lets say we added a new to it as below so how will you filter this value using java 8 
+
+map.put("Ankit",null);
+
+
+3. explain the implementation of Apache kafka in your project
+
+4. how you have used database in your project till now?

@@ -1,0 +1,21 @@
+first round happened on 15 June at 9:45 AM to 10:30 AM
+Interviewer:Suresh 
+Hr: punitha 
+contact Ujjval
+
+first Round Status: Selected
+
+First round of interview with Hexaware on 15 june 9:45 to 10:30 am
+1. What are the scopes different scope of spring bean
+2. What different scope available for java bean
+3. What is the purpose of static keyboard 
+4. Can we override a static method from parent class to child class with same signature 
+5. Can we override private method 
+6. Can we override final method 
+7. Explain internal workings of hashmap in java 
+8. When happen when we use get method of Hashmap
+9. Can we store student object in Hashmap as key ? If yes then what changes we should do In student class if no why ?
+10. If we have a Class A having only integer I variable and a constructor initialising I variable and then another class B which do not have anything in it overding class A and then we have class C containing Main method and it is initialising or creating Object of Class B so what will happen here will this code compile here ?
+11. If not how to fix this error what are the changes we will do
+12. Coding questions: let's say we have list of a student class having name age and courses field in it and I want to seperate each student based on their courses then how to do that in java 8( answer is used groupingBy)
+13
